@@ -55,7 +55,7 @@ This document is divided into 5 sections, plus 3 appendixes:
 
 [Section 2: DOME General Overview](02_dome_general_overview.md) - describes the overall structure of the project, including different roles of users, the overall technical approach and the user journeys.
 
-[Section 3: DOME Trust and IAM Framework](03_trust_and_iam_framework.md) - provides a description of the decentralised Trust and Identity and Access Management (IAM) framework which are implemented in DOME.
+[Section 3: DOME Trust and IAM Framework](identity/identity.md) - provides a description of the decentralised Trust and Identity and Access Management (IAM) framework which are implemented in DOME.
 
 [Section 4: DOME Marketplace Persistence Layer](04_persistence_layer.md) - provides a description of the DOME Persistence Layer, focusing on the specific goals and priorities associated with its implementation, including the Shared Catalog and the Transactions Layer.
 
