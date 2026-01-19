@@ -143,7 +143,7 @@ We will talk more about the Business Wallet in another part of this document, bu
 - **Future-Proof:** Built on open standards and evolving digital identity frameworks, ensuring long-term relevance and adaptability.
 - **Streamlined Onboarding:** Facilitates quicker and more efficient onboarding of new employees and partners by digitizing the authorization process.
 
-## The LEARCredential
+## 3.3 The LEARCredential
 
 The `LEARCredential` is a machine-readable legal document representing an electronic mandate (known also as Company Authorization Letter). In this context, the term `mandate` is used to describe the concept of **delegating specific permissions and powers to an employee of an organisation, enabling that employee to act on behalf of the company in a specific set of matters or tasks**.
 
@@ -167,12 +167,12 @@ The data model of the LEARCredential is based in the [RPaM-Ontology](https://git
 
 We adapt the results of that project, with simplifications and specialisations, to the concrete environment where we use the LEARCredential. To facilitate the job of the reader of this document, in some sections we copy literal sentences from the RPaM Ontology project, and adapt the texts to our requirements. However, the reader is encouraged to access the original documents for more details and understand the original approach, including the [RPaM Ontology Glossary](https://everis-rpam.github.io/Glossary.html).
 
-### The Mandate
+### 3.3.1 The Mandate
 According to the RPaM Glossary, a "mandate is a record that describes the terms under which a mandator grants a representation power to a mandatee".
 
 In DOME, the mandate is composed of three related objects: `mandator`, `mandatee`, `power` and `signer`. The mandate object is signed or sealed with an advanced or qualified signature or seal using an eIDAS certificate.
 
-#### Mandator
+#### 3.3.1.1 Mandator
 
 The object mandator identifies the employee of the company who is delegating a subset of her powers on the mandatee.
 
@@ -182,7 +182,7 @@ The mandator is either:
 
 - an employee who is a mandatee in another mandate where the mandator is a legal representative of the company. We do not support more than two levels of delegation.
 
-#### Mandatee
+#### 3.3.1.2 Mandatee
 
 The mandatee is the person granted with the power to represent (and act as) the company in some specific actions with third-parties. The powers granted to the mandatee must be a subset of the powers of the mandator. For example, an employee (the mandatee) can be empowered by the legal representative of the company (the mandator) to perform the onboarding process in DOME.
 
@@ -197,13 +197,13 @@ The private key controlled by the employee is used to prove to Relying parties r
 - Using a did:key where the employee controls the private key associated to the did:key.
 - Using an eIDAS certificate owned by the employee. This is very rare today (end of 2024), but will become more common when eIDAS2 and the EUDI Wallet is adopted.
 
-#### Signer
+#### 3.3.1.3 Signer
 
 The Signer is either the Mandator or a third-party that attests that the Mandator really delegated the powers to the Mandatee. The Signer is the entity that performs an advanced or qualified signature or seal using an eIDAS certificate.
 
 The Signer is the entity that has to be trusted by the receiver of the LEARCredential.
 
-#### Power
+#### 3.3.1.4 Power
 
 This object is a list of each specific power that is delegated from the mandator to the mandatee. The powers must be concrete and as constrained as possible, and must follow a taxonomy with the semantics well specified.
 
@@ -266,7 +266,7 @@ The `power` object is an array where each element is a power that is delegated f
   - `Execute` when `function` is `Onboarding`.
   - Any combination of `Create`, `Update` and `Delete` when `function` is `ProductOffering`.
 
-## Authentication
+## 3.4 Authentication with the LEARCredential
 
 Authentication in DOME with the LEARCredential can be performed both for Human-to-Machine (H2M) and Machine-to-Machine (M2M) use cases.
 
@@ -283,7 +283,7 @@ There are two types of users that can authenticate to DOME services:
 
 We first explain the H2M flow: how your application can authenticate employees of companies (including your own company, of course). Later we describe the M2M flow.
 
-### Human-to-Machine (H2M) authentication flow
+### 3.4.1 Human-to-Machine (H2M) authentication flow
 
 ![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
 
@@ -299,7 +299,7 @@ If the application only requires standard claims like first-name, last_name or e
 
 However, if the application requires the whole set of information in the Verifiable Credential, it has to support the non-standard claims and extract the information from the Verifiable Credential.
 
-#### Parameters of the VCVerifier
+#### 3.4.1.1 Parameters of the VCVerifier
 
 You have to tell your Application some things before it can talk to the VCVerifier.
 
@@ -313,7 +313,7 @@ Your Application must use the following endpoints of the VCVerifier during the f
 
 https://verifier.dome-marketplace.eu/oidc/authorize?state=6cf8b5dd-3fc9-4d6b-bc64-722badb5a419&client_id=did:key:zDnaeTU39Wx9KXgmEwmfXsZSyEVxgCqwCVmoPyVQUTD8bhW8a&response_type=code&request_uri=https://dome-marketplace.eu/auth/vc/request.jwt&scope=openid learcredential&nonce=56a091bb-ad1e-47f0-bc8b-7dfe99a6bae4
 
-#### Starting the Authentication Request
+#### 3.4.1.2 Starting the Authentication Request
 
 Before any authentication can take place, your Application has to be registered with the VCVerifier. This is done during the onboarding process in DOME, or at any time later, contacting the onboarding team.
 
@@ -346,7 +346,7 @@ Note the following:
 
 - **state** is used by your Application to match this request with the future reply, in order to support multiple users at the same time.
 
-#### Receiving the Verifiable Credential in your Application
+#### 3.4.1.3 Receiving the Verifiable Credential in your Application
 
 After the execution of the Authorization Code Flow, your Application can receive the Verifiable Credential in two ways:
 
@@ -356,7 +356,7 @@ After the execution of the Authorization Code Flow, your Application can receive
 
 The contents of the LEARCredential can be used by the Application to perform not only authentication but also authorization (access control). For example, using the Powers of the User which are included in the LEARCredential.
 
-### Machine-to-Machine (M2M) authentication flow
+### 3.4.2 Machine-to-Machine (M2M) authentication flow
 
 ![A server authenticating with Verifiable Credentials](DOMEAuthentication-M2M-flow-overview.drawio.png)
 
@@ -366,7 +366,7 @@ The credential used by the Application for authenticating to the VCVerifier is t
 
 The M2M flow uses the **Client Credentials Grant**, following the [OAuth 2.1 IETF draft (12 July 2024)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10), which among other things takes into account the [OAuth 2.0 Security Best Current Practice](https://oauth.net/2/oauth-best-practice/) and consolidates several new RFCs that are relevant for our use case.
 
-#### Authenticating and receiving an Access Code
+#### 3.4.2.1 Authenticating and receiving an Access Code
 
 The M2M flow uses a Token Endpoint specifically for M2M:
 
