@@ -270,13 +270,12 @@ The `power` object is an array where each element is a power that is delegated f
 
 Authentication in DOME with the LEARCredential can be performed both for Human-to-Machine (H2M) and Machine-to-Machine (M2M) use cases.
 
-DOME uses Verifiable Credentials for authentication and access control of the users interacting with the DOME services.
+DOME uses Verifiable Credentials for authentication and access control of the entities interacting with the DOME services.
 
-In this document we describe **how you can integrate the DOME authentication mechanism in your own applications**. It is very easy.
+This is an overview of **how you can integrate the DOME authentication mechanism in your own applications**.
+For details, see the [Verifier API](https://github.com/DOME-Marketplace/dome-altia-verifier-aio).
 
-You do not need to know the underlying technical details to use it, but if you are interested you can look [here](https://dome-marketplace.github.io/powers-of-representation/index.html).
-
-There are two types of users that can authenticate to DOME services:
+There are two types of entities that can authenticate to DOME services:
 
 - Employees of companies using DOME services. We call this the Human-to-Machine (M2M) flows.
 - Applications or machines owned or operated by an organisation, accessing the DOME services. We call this the Machine-to-Machine (M2M) flows.
@@ -287,9 +286,9 @@ We first explain the H2M flow: how your application can authenticate employees o
 
 ![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
 
-DOME provides a component called the **VCVerifier** which makes very easy for applications to integrate authentication with Verifiable Credentials. The VCVerifier component hides the complexity of the OID4VP protocol required to talk to the Wallet.
+DOME provides a component called the [VCVerifier](https://github.com/DOME-Marketplace/dome-altia-verifier-aio) which makes very easy for applications to integrate authentication with Verifiable Credentials. The VCVerifier component hides the complexity of the [OpenID for Verifiable Presentations (OID4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) protocol required to talk to the Wallet.
 
-The VCVerfier component talks standard OpenID Connect protocol with the application, and uses OID4VP to request authentication to the Wallet and receive the Verifiable Credential.
+The VCVerifier component uses standard OpenID Connect protocol with the application, and uses OID4VP to request authentication to the Wallet and receive the Verifiable Credential.
 
 For the Application, the VCVerifier is just an OpenID Provider (OP), so any application which can use standard <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect</a>, either directly or through an OpenID Provider like Keycloak, can authenticate users with Verifiable Credentials using the DOME VCVerifier component. If you use Keycloak or other OpenID Provider, you have to configure it as an identity broker, in the same way as you would do if using social logins (e.g., Google, Facebook, etc.).
 
