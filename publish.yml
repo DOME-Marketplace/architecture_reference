@@ -1,0 +1,40 @@
+name: Sync Rich Markdown to GFM
+
+on:
+  push:
+    branches:
+      - main  # Or your primary branch name
+    paths:
+      - 'src/**'
+      - 'publish.py'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # Fetch all history so we can commit back
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Run Build Script
+        run: python publish.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto-sync [skip ci]" && git push)
