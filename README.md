@@ -1,4 +1,4 @@
-![](assets/media/image163.png)
+![](src/assets/media/image163.png)
 
 This document describes the Reference Architecture and Detailed Technical Specifications of the DOME Marketplace system.
 
