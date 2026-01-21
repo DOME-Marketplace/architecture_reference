@@ -14,7 +14,7 @@ This document is divided into the following sections:
 
 [DOME marketplace features](docs/05_features.md) - provides a description of the DOME marketplace, including the design of the processes involved in a federated procurement scenario and high-level architecture of the various subsystems delivering such features.
 
-[DOME APIs](docs/tmfapis/index.md) - provides a description of the APIs used in DOME used by providers or federated marketplaces to integrate with teh DOME ecosystem.
+[DOME APIs](docs/tmfapis/index.md) - provides a description of the APIs used in DOME used by providers or federated marketplaces to integrate with the DOME ecosystem.
 
 [Appendix I: example of onboarding of organisations in DOME](docs/06_appendix_i.md) - provides examples with detailed technical descriptions of some user journeys in DOME..
 
@@ -25,8 +25,6 @@ This document is divided into the following sections:
 ## Related documents and resources
 
 Following is a list of valuable links to relevant documents and resources:
-
-- [TM Forum APIs (summary by FIWARE Foundation)](https://docs.google.com/document/d/1ePSb3OammKcsnMgHNgp5ZdH7pif4oT5gUtsBNUR1ikc/edit?usp=sharing)
 
 - [EU Digital Identity Wallet Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework)
 
