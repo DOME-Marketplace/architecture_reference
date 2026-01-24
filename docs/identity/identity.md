@@ -24,10 +24,7 @@ The LEAR (Legal Entity Appointed Representative) is a person, usually an adminis
 
 This appointment is formalized with the LEAR Appointment Letter, which is effectively a mandate. An overview of the LEAR Appointment Letter is shown in the following figure.
 
-<figure>
-<img src="lear_letter_all.drawio.png" alt="LEAR Appointment Letter" />
-<figcaption aria-hidden="true">LEAR Appointment Letter</figcaption>
-</figure>
+![LEAR Appointment Letter](lear_letter_all.drawio.png)
 
 There are four sections of interest in that Letter:
 1. the identification of the organization and the legal representative;
@@ -39,24 +36,15 @@ The first three sections correspond to the figures of Mandator (Legal Representa
 
 The following figure focuses on the identification of the organization and the legal representative, and provides an example representation in JSON format.
 
-<figure>
-<img src="lear_representative.png" alt="Identification of Organisation and Legal Representative" />
-<figcaption aria-hidden="true">Identification of Organisation and Legal Representative</figcaption>
-</figure>
+![Identification of Organisation and Legal Representative](lear_representative.png)
 
 The next figure focuses on the identification of the employee who will be appointed as LEAR, and an example representation in JSON.
 
-<figure>
-<img src="lear_employee.png" alt="Identification of Employee" />
-<figcaption aria-hidden="true">Identification of Employee</figcaption>
-</figure>
+![Identification of Employee](lear_employee.png)
 
 Finally, the next figure focuses on the formal description on the powers that the LEAR must have, and an example representation in JSON format.
 
-<figure>
-<img src="lear_power.png" alt="Delegated Powers" />
-<figcaption aria-hidden="true">Delegated Powers</figcaption>
-</figure>
+![Delegated Powers](lear_power.png)
 
 ### 3.1.2 The mandate in DOME
 
@@ -64,10 +52,7 @@ The above can be generalized to map the different sections of the LEAR Appointme
 
 You can see that the eMandate has an object called `mandate`, which contains the `mandator`, `mandatee`, and `power` objects, mirroring the structure of the LEAR Appointment Letter. You can also see that we use an eIDAS signature to sign the eMandate. This signature not only ensures its authenticity and integrity, but it also provides linkage to the real-world identity of the organization that appointed the LEAR, providing a proper level of legal certainty that other types of signatures can not provide.
 
-<figure>
-<img src="mapping_mandate.png" alt="Mapping of the LEAR Appointment Letter to a DOME eMandate" />
-<figcaption aria-hidden="true">Mapping of the LEAR Appointment Letter to a DOME eMandate</figcaption>
-</figure>
+![Mapping of the LEAR Appointment Letter to a DOME eMandate](mapping_mandate.png)
 
 We will talk now about the properties of the signature. But first, let’s talk about the Trust Framework that we use in DOME
 
