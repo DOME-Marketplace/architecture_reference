@@ -1,3 +1,13 @@
+# Relationship with the EUDI Wallet ecosystem
+
+The DOME Identity and Access Management system is aligned with the eIDAS2 Regulation and the EUDI Wallet ecosystem. To describe the meaning of the word 'alignment' in this context, we reproduce here the picture in the [EUDIW Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md):
+
+![EUDI Wallet ecosystem](images/Figure_1_Overview_of_EUDI_Wallet_roles.png)
+
+The whole ecosystem is still not in place (although we expect the second half of 2026 to be very active), but this is a simplified picture to facilitate the description of how the DOME components fit in the EUDI Wallet architecture.
+
+![DOME-EUDI_Wallet_simple.png](images/DOME-EUDI_Wallet_simple.png)
+
 # 3 DOME Trust and IAM Framework
 
 DOME uses **electronic mandates for authentication of employees acting on behalf of organizations**. These electronic mandates are represented in machine-readable format compatible with the EUDI Wallet (and the future Business Wallet) to facilitate automated processing and verification, and eliminate the slow, cumbersome and error-prone manual processes associated with traditional paper-based mandates. 
