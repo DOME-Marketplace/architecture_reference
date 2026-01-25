@@ -38,4 +38,4 @@ Following is a list of valuable links to relevant documents and resources:
 
 Just create a pull request with your changes to the documents in the `src` directory. Those are written in [Pandoc Markdown](https://pandoc.org/) format and converted to Github GFM (GitHub Flavored Markdown) format in the `docs` directory, which is where the user reads the documentation.
 
-The script to convert the documents from `src` to `docs` is `publish.py`.
+The script to convert the documents from `src` to `docs` is `publish.py`. It should be run to update the docs directory.
