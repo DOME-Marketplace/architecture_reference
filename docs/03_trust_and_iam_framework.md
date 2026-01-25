@@ -4,7 +4,9 @@ DOME brings a decentralised Trust and Identity and Access Management (IAM) frame
 
 The Trust framework ensures that the information published on DOME is trustful. It defines and enforces a set of rules that actors in the DOME ecosystem (data/app service providers, federated marketplace providers, end customers) agree to follow. By following them, all organisations can use their digital identities and characterise services in a consistent and trustful manner. This lowers the barriers for organisations to complete transactions or share information with other organisations.
 
-The IAM framework, on the other hand, enables actors in the DOME ecosystem to authenticate into DOME services (i.e., the DOME Portal, federated marketplace portals or TM Forum APIs implemented on top of the DOME Persistence Layer) and help to manage proper access to those services based on their profiles. This IAM framework relies on Verifiable Credentials/Verifiable Presentations and leverages the Trust framework to provide an efficient, scalable, and decentralised IAM that participants can use. The Trust and IAM framework implemented in DOME is not only for managing authentication and authorization in the interaction with the DOME services, but it is also available for data/app services which may use it for managing the interactions between them and their users.
+The IAM framework, on the other hand, enables actors in the DOME ecosystem to authenticate into DOME services (i.e., the DOME Portal, federated marketplace portals or TM Forum APIs implemented on top of the DOME Persistence Layer) and help to manage proper access to those services based on their profiles.
+
+This IAM framework relies on Verifiable Credentials/Verifiable Presentations and leverages the Trust framework to provide an efficient, scalable, and decentralised IAM that participants can use. The Trust and IAM framework implemented in DOME is not only for managing authentication and authorization in the interaction with the DOME services, but it is also available for data/app services which may use it for managing the interactions between them and their users.
 
 ## 3.1 Trust Framework
 
@@ -333,73 +335,42 @@ Based on the regulation, some TSPs in the EU provide several types of digital ce
 - **Natural Person as Legal Entity Representative** certificate for electronic signatures
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <strong>Note: electronic signature vs. electronic seals</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 </p>
-
 <p>
-
 <em><strong>Electronic signature</strong>: An electronic signature is a data in electronic form which is attached to or logically associated with other data in electronic form and which is used by the signatory to sign, <strong>where the signatory is a natural person</strong>.</em>
 </p>
-
 <p>
-
 <em>Like its handwritten counterpart in the offline world, an electronic signature can be used, for instance, to electronically indicate that the signatory has written the document, agreed with the content of the document, or that the signatory was present as a witness.</em>
 </p>
-
 <p>
-
 <em><strong>Electronic seal</strong>: An electronic seal is a data in electronic form, which is attached to or logically associated with other data in electronic form to ensure the latter’s origin and integrity, <strong>where the creator of a seal is a legal person</strong> (unlike the electronic signature that is issued by a natural person).</em>
 </p>
-
 <p>
-
 <em>In this purpose, electronic seals might serve as evidence that an electronic document was issued by a legal person, ensuring certainty of the document’s origin and integrity. Nevertheless, across the European Union, <strong>when a transaction requires a qualified electronic seal from a legal person, a qualified electronic signature from the authorized representative of the legal person is equally acceptable</strong>.</em>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
-
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-
 <hr />
-
 <ol>
-
 <li id="fn1">
-
 <p>
-
 Source: European Commission eSignature FAQ (<a href="https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/eSignature+FAQ"><u>https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/eSignature+FAQ</u></a>)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a>
 </p>
-
 </li>
-
 </ol>
-
 </section>
 
 **Some terminology**
@@ -425,108 +396,61 @@ Instead of using traditional digital certificates, we require that the LEAR rece
 This concept of LEAR is very similar to the equivalent one for how organisations interact with the European Commission to perform certain tasks on behalf of their organisation, as part of its participation in EU funded grants, procurements and prizes that are managed via the EU Funding & Tenders Portal. To illustrate further, see below the description of LEAR from the Commission.
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <strong>LEAR appointment and validation</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
 </p>
-
 <p>
-
 <em>Parallel to the validation of your organisation, you will be requested by the Central Validation Service to appoint your Legal Entity Appointed Representative (LEAR).</em>
 </p>
-
 <p>
-
 <em>This must be done <strong>by a legal representative</strong> of your organisation with the necessary legal authority to commit the organisation for this type of decisions (e.g. typically CEOs, rectors, Director-Generals, etc. always in accordance with the statutes of your organisation).</em>
 </p>
-
 <p>
-
 <em>The LEAR role, which can be performed by <strong>any member of the organisation</strong> (typically from the central administration), is key. They are formally nominated to manage your organisation’s use of the Portal and thus bear the final responsibility for all your actions in the Portal. Once validated, they will be responsible for:</em>
 </p>
-
 <ul>
-
 <li>
-
 <p>
-
 <em>keeping an overview of all the proposals/projects/contracts your organisation is involved in</em>
 </p>
-
 </li>
-
 <li>
-
 <p>
-
 <em>managing all the legal and financial information about your organisation</em>
 </p>
-
 </li>
-
 <li>
-
 <p>
-
 <em>managing the access rights at organisation-level (and read-only access at project-level)</em>
 </p>
-
 </li>
-
 <li>
-
 <p>
-
 <em>appointing the persons which will be able to electronically sign grants/contracts (Legal Signatories — LSIGNs) and cost claims/invoices (Financial Signatories — FSIGNs).</em>
 </p>
-
 </li>
-
 </ul>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
-
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-
 <hr />
-
 <ol>
-
 <li id="fn1">
-
 <p>
-
 Source: European Commission (<a href="https://webgate.ec.europa.eu/funding-tenders-opportunities/display/OM/LEAR+appointment+and+validation"><u>https://webgate.ec.europa.eu/funding-tenders-opportunities/display/OM/LEAR+appointment+and+validation</u></a>)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a>
 </p>
-
 </li>
-
 </ol>
-
 </section>
 
 We have to make a detailed definition of the LEAR responsibilities in our context, and specify that instead of a signed PDF we require a signed Verifiable Credential with the proper content.
@@ -586,7 +510,7 @@ The legal entity acting as service provider and performing authentication and ac
 We describe here a mechanism to use Verifiable Credentials to perform Authentication and Access Control leveraging the eIDAS trust framework and using advanced or qualified signatures and seals to provide a high level of legal certainty and especially enjoying the presumption of non-repudiation provided by those eIDAS signatures.
 
 | We focus here on <span class="mark">legal persons</span> and natural persons or machines acting on behalf of the legal person with its authorisation. The identification and authentication of <span class="mark">natural persons</span> acting on their own (citizens) is out of scope (except when acting as representatives of the legal person, see below). Whenever eIDAS2 and the EUDIW (European Digital Identity Wallet) are ready, we will support that mechanism for identification and access control. |
-|----|
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 The mechanism described here allows a Relying Party receiving a Verifiable Credential from a principal engaging in an authentication process to perform the following verifications:
 
@@ -645,16 +569,16 @@ The mechanisms described here can be used to generate credentials to employees, 
 
 <span class="mark">This mechanism for sealing/signing the Verifiable Credentials has the following properties:</span>
 
-- <span class="mark">**Provides high assurance of the identity of the creator of the credential.**
+- <span class="mark">**Provides high assurance of the identity of the creator of the credential. **
   The seals/signatures provide **high assurance of the identity of the creator of the seal**. For example, it will be difficult for a malicious user to get a qualified seal certificate in the name of a company, because the QTSP will be responsible to check that such a seal is issued to the persons representing the company and not to unauthorised persons.</span>
 
-  <span class="mark">**Enables authorised representatives of the legal person to act on behalf of the legal person.**
+  <span class="mark">**Enables authorised representatives of the legal person to act on behalf of the legal person. **
   The mechanism provides **high legal predictability**, including for the qualified electronic signature the benefits of its **legal equivalence to handwritten signatures**.  
   As stated by the eIDAS Regulation, when a transaction requires a qualified electronic seal from a legal person, a qualified electronic signature from the authorised representative of the legal person should be equally acceptable.  
   It is possible to certify elements that are bound to the signatory such as a title (e.g. Director), a link with its employer, etc. Because the QTSP is trusted for verifying the information it certifies, the Relying Party can get a high level of confidence in such information conveyed with the signature through the signatory’s certificate.  
   In this way, the Relying Party receiving Verifiable Credentials can have the same legal certainty than with any other document in other formats (e.g. PDF) signed with AdES or QES signatures or with handwritten signatures (in the case of QES).</span>
 
-  <span class="mark">**Provides a high level of legal certainty and interoperability.**
+  <span class="mark">**Provides a high level of legal certainty and interoperability. **
   Any basic signature benefits from the non-discrimination rule, which means that a Court in an EU Member State cannot reject it automatically as being invalid simply because they are in electronic form.  
   However, their dependability is lower than that of an AdES/AdESeal or QES/QESeal because the signatory may be required to prove the security of the technology being used if the validity of the signature is disputed before a court. This requires significant costs and efforts that could be avoided with relative ease by opting for the more established and standardised advanced and qualified signature solutions. It may also be the case that the relying parties have no applications or tools to validate such signature, when not based on standards; in such a scenario, the signature may be legally valid and technologically robust, but of limited use (see \[[ENISA-QES](https://alastria.github.io/did-method-elsi/authn.html#bib-enisa-qes)\] and \[[ENISA-QSEAL](https://alastria.github.io/did-method-elsi/authn.html#bib-enisa-qseal)\]).  
   For these interoperability reasons, QES/QESeal that are based on recognised EU standards are preferable unless the parties operate purely in a local context where the acceptance and usability of the chosen signature solution is sufficiently certain.  
@@ -819,84 +743,50 @@ For our example, we use the same that are used for accessing the European Commis
 <span class="mark">From the above form we can derive the following claims using the example data:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“title”: “Mr.”,</mark>
 </p>
-
 <p>
-
 <mark>“first_name”: “John”,</mark>
 </p>
-
 <p>
-
 <mark>“last_name”: “Doe”,</mark>
 </p>
-
 <p>
-
 <mark>“gender”: “M”,</mark>
 </p>
-
 <p>
-
 <mark>“postal_address”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“email”: “johndoe@goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“telephone”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“fax”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“mobile_phone”: “+34787426623”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 #### 3.3.2.2 DID of the employee
@@ -922,44 +812,26 @@ Those personal details are exactly the same as if the employee signs any documen
 <span class="mark">An example DID for the employee could be:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">In this example, the signatures performed with the private key can not be JAdES-compliant (\[[ETSI-JADES](https://alastria.github.io/did-method-elsi/authnplain.xhtml#bib-etsi-jades)\]), but if the LEARCredential is attached to any other credential that is signed with this private key, then they can be traced up to the eIDAS certificate of the COO and so the chain of responsibility can be determined..</span>
@@ -967,89 +839,53 @@ Those personal details are exactly the same as if the employee signs any documen
 <span class="mark">With the DID for the employee, the set of claims identifying him would be then:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”,</mark>
 </p>
-
 <p>
-
 <mark>“title”: “Mr.”,</mark>
 </p>
-
 <p>
-
 <mark>“first_name”: “John”,</mark>
 </p>
-
 <p>
-
 <mark>“last_name”: “Doe”,</mark>
 </p>
-
 <p>
-
 <mark>“gender”: “M”,</mark>
 </p>
-
 <p>
-
 <mark>“postal_address”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“email”: “johndoe@goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“telephone”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“fax”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“mobile_phone”: “+34787426623”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 #### 3.3.2.3 legalRepresentative
@@ -1057,110 +893,63 @@ Those personal details are exactly the same as if the employee signs any documen
 <span class="mark">This section identifies the natural person (the COO) who is a legal representative of the legal person (GoodAir) and that is nominating the employee identified in the credential.</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>“legalRepresentative”</mark>: <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“cn”: “56565656V Jesus Ruiz”,</mark>
 </p>
-
 <p>
-
 <mark>“serialNumber”: “56565656V”,</mark>
 </p>
-
 <p>
-
 <mark>“organizationIdentifier”: “VATES-12345678”,</mark>
 </p>
-
 <p>
-
 <mark>“o”: “GoodAir”,</mark>
 </p>
-
 <p>
-
 <mark>“c”: “ES”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
-
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <strong><mark>NOTE: Attributes for natural and legal persons</mark></strong>
 </p>
-
 <p>
-
 <mark>The attributes for natural persons and legal persons are derived from the <a href="https://ec.europa.eu/digital-building-blocks/wikis/download/attachments/467109280/eidas_saml_attribute_profile_v1.0_2.pdf?version=1&amp;modificationDate=1639417533738&amp;api=v2"><u>eIDAS SAML Attribute Profile (eIDAS Technical Sub-group, 22 June 2015)</u></a>.</mark>
 </p>
-
 <p>
-
 <mark>All attributes for the eIDAS minimum data sets can be derived from the <a href="https://ec.europa.eu/isa2/solutions/core-vocabularies_en/"><u>ISA Core Vocabulary</u></a> and <a href="https://joinup.ec.europa.eu/collection/semic-support-centre/specifications"><u>https://joinup.ec.europa.eu/collection/semic-support-centre/specifications</u></a>.</mark>
 </p>
-
 <p>
-
 <mark>In the case of natural persons refer to the <a href="https://joinup.ec.europa.eu/asset/core_person/asset_release/core-person-vocabulary"><u>Core Person Vocabulary</u></a> and in the case of legal persons refer to definitions for <a href="https://joinup.ec.europa.eu/asset/core_business/asset_release/core-business-vocabulary"><u>Core Business Vocabulary</u></a>.</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 #### 3.3.2.4 rolesAndDuties of the LEAR
@@ -1172,74 +961,46 @@ Those personal details are exactly the same as if the employee signs any documen
 <span id="_3hv69ve" class="anchor"></span>*Figure 3.4 - <span class="mark">LEAR roles and duties.</span>*
 
 | <span class="mark">We do not yet have defined the actual mechanism that will be used for describing formally the roles and duties of the LEAR. The way we specify them below is just an example. There is work ongoing to define the detailed mechanism formally (e.g. with ODRL), and it is expected to change. This example is intended only to describe the concepts in detail.</span> |
-|----|
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 <span class="mark">The rolesAndDuties object points to an externally hosted object with the roles and duties of the LEAR. This external object can be either a machine-interpretable definition of the roles and duties in the credential, or just an external definition of the roles and duties in natural language. The ideal approach is the first option, expressing the semantics with a proper machine-readable language, because this will allow automatic access control at the granularity of the individual sentences of that expression language. The rolesAndDuties object can also have the definition embedded into it, instead of having a pointer to an external object.</span>
 
 <span class="mark">A simplistic implementation of the object inside the credential could be:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>“rolesAndDuties”</mark>: <mark>\[</mark>\]</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">Where the last part of the url can correspond to the hash of the external linked document to ensure that any modification or tampering can be detected. The contents of that object at that url could be:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>\[</mark>\]</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">In the above example, we have specified that the roles object referenced in the credential with id: https://dome-marketplace.eu//lear/v1/6484994n4r9e990494 is granting the employee of GoodAir (in our example) to access services in the DOME marketplace (specified with the field target) with the roles seller and customer (which are the roles of the [<u>FIWARE BAE component</u>](https://business-api-ecosystem.readthedocs.io/en/latest/index.html)).</span>
@@ -1251,184 +1012,110 @@ Those personal details are exactly the same as if the employee signs any documen
 <span class="mark">With the above values for the example, the complete LEARCredential would become something like this:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“@context”: \[</mark>\],</mark>
 </p>
-
 <p>
-
 <mark>“id”: “urn:did:elsi:25159389-8dd17b796ac0”,</mark>
 </p>
-
 <p>
-
 <mark>“type”: \[“VerifiableCredential”, “LEARCredential”\],</mark>
 </p>
-
 <p>
-
 <mark>“issuer”: {</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:elsi:VATES-12345678”</mark>
 </p>
-
 <p>
-
 <mark>},</mark>
 </p>
-
 <p>
-
 <mark>“issuanceDate”: “2022-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“validFrom”: “2022-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“expirationDate”: “2023-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“credentialSubject”: {</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”,</mark>
 </p>
-
 <p>
-
 <mark>“title”: “Mr.”,</mark>
 </p>
-
 <p>
-
 <mark>“first_name”: “John”,</mark>
 </p>
-
 <p>
-
 <mark>“last_name”: “Doe”,</mark>
 </p>
-
 <p>
-
 <mark>“gender”: “M”,</mark>
 </p>
-
 <p>
-
 <mark>“postal_address”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“email”: “johndoe@goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“telephone”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“fax”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“mobile_phone”: “+34787426623”,</mark>
 </p>
-
 <p>
-
 <mark>“legalRepresentative”: {</mark>
 </p>
-
 <p>
-
 <mark>“cn”: “56565656V Jesus Ruiz”,</mark>
 </p>
-
 <p>
-
 <mark>“serialNumber”: “56565656V”,</mark>
 </p>
-
 <p>
-
 <mark>“organizationIdentifier”: “VATES-12345678”,</mark>
 </p>
-
 <p>
-
 <mark>“o”: “GoodAir”,</mark>
 </p>
-
 <p>
-
 <mark>“c”: “ES”</mark>
 </p>
-
 <p>
-
 <mark>},</mark>
 </p>
-
 <p>
-
 <mark>“rolesAndDuties”: \[</mark>\]</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ### 3.3.3 Issuing the LEARCredential
@@ -1490,44 +1177,26 @@ For clarity of exposition, we assume in this profile that the End User starts th
 <span class="mark">The level of assurance (LoA) of this authentication mechanism is one of the factors that will determine the confidence that the Verifiers can have on the credentials received by them from a given Issuer.</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <strong><mark>NOTE: LEARCredential</mark></strong>
 </p>
-
 <p>
-
 <mark>In the case of the LEARCredential, the End User (John Doe) is an employee of GoodAir and in order to receive the credential John first has to authenticate into the company systems using whatever mechanism GoodAir uses for employee authentication.</mark>
 </p>
-
 <p>
-
 <mark>Being a modern company, GoodAir uses Verifiable Credentials IAM but this is not a requirement for the issuance of the LEARCredential.</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 #### 3.3.3.3 Credential Offer
@@ -1551,43 +1220,25 @@ For clarity of exposition, we assume in this profile that the End User starts th
 - <span class="mark">credentials: *REQUIRED*. A JSON array, where every entry is a JSON string. To achieve interoperability faster, this profile defines a global Trusted Credential Schemas List where well-known credential schemas are defined, in addition to the individual credentials that each Issuer can define themselves. The string value *MUST* be one of the id values in one of the objects in the credentials_supported metadata parameter of the Trusted Credential Schemas List (described later), or one of the id values in one of the objects in the credentials_supported Credential Issuer metadata parameter provided by the Credential Issuer. When processing, the Wallet *MUST* resolve this string value to the respective object. The credentials defined in the global Trusted Credential Schema List have precedence over the ones defined by the Credential Issuer.</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <blockquote>
-
 <p>
-
 <strong><mark>NOTE: LEARCredential</mark></strong>
 </p>
-
 <p>
-
 <mark>The only credential being offered in our case is the LEARCredential, so this is the credential schema that should be specified here. The LEARCredential is a credential known globally to the DOME ecosystem, so its schema should be published and be available in the Trusted Credential Schemas List.</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">grants: *REQUIRED*. A JSON object indicating to the Wallet the Grant Type pre-authorized_code. This grant is represented by a key and an object, where the key is urn:ietf:params:oauth:grant-type:pre-authorized_code. In this profile the credential issuance flow requires initial authentication of the End User by the Credential Issuer, so the Pre-Authorized Code Flow achieves a good level of security and we do not need the more general Authorization Code Flow.  
@@ -1602,79 +1253,47 @@ For clarity of exposition, we assume in this profile that the End User starts th
 <span class="mark">The following non-normative example shows a Credential Offer object where the Credential Issuer offers the issuance of one Credential (“LEARCredential”):</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“credential_issuer”: “https://www.goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“credentials”: \[</mark>\],</mark>
 </p>
-
 <p>
-
 <mark>“grants”: {</mark>
 </p>
-
 <p>
-
 <mark>“urn:ietf:params:oauth:grant-type:pre-authorized_code”: {</mark>
 </p>
-
 <p>
-
 <mark>“pre-authorized_code”: “asju68jgtyk9ikkew”,</mark>
 </p>
-
 <p>
-
 <mark>“user_pin_required”: <strong>true</strong></mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### <span class="mark">3.3.3.3.2 Contents of the QR code</span>
@@ -1682,77 +1301,45 @@ For clarity of exposition, we assume in this profile that the End User starts th
 <span class="mark">Below is a non-normative example of the Credential Offer displayed by the Credential Issuer as a QR code when the Credential Offer is passed by reference, as required in this profile:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>https://www.goodair.com/credential-offer?</mark>
 </p>
-
 <p>
-
 <mark>credential_offer_uri<strong>=</strong>https%3A%2F%2Fserver%2Eexample%2Ecom%2Fcredential-offer%2F5j349k3e3n23j</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">Which in plain text would be:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>https://www.goodair.com/credential-offer?</mark>
 </p>
-
 <p>
-
 <mark>credential_offer_uri<strong>=</strong>https://www.goodair.com/credential-offer/5j349k3e3n23j</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">To increase security, the Issuer *MUST* make sure that every Credential Offer URI is unique for all credential offers created. This is the purpose of the nonce (5j349k3e3n23j) at the end of the url in the example. Issuers can implement whatever mechanism they wish, as far as it is transparent to the wallet.</span>
@@ -1820,59 +1407,35 @@ For clarity of exposition, we assume in this profile that the End User starts th
 <span class="mark">Below is a non-normative example of a Token Request:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark><strong>POST</strong> /token <strong>HTTP/</strong>1.1</mark>
 </p>
-
 <p>
-
 <mark>Host<strong>:</strong> server.example.com</mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/x-www-form-urlencoded</mark>
 </p>
-
 <p>
-
 <mark>grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Apre-authorized_code</mark>
 </p>
-
 <p>
-
 <mark>&pre-authorized_code=SplxlOBeZQQYbYS6WxSbIA</mark>
 </p>
-
 <p>
-
 <mark>&user_pin=493536</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### <span class="mark">3.3.3.6.2 Successful Token Response</span>
@@ -1888,79 +1451,47 @@ For clarity of exposition, we assume in this profile that the End User starts th
 <span class="mark">Below is a non-normative example of a Token Response:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark><strong>HTTP/</strong>1.1 200 <strong>OK</strong></mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/json</mark>
 </p>
-
 <p>
-
 <mark>Cache-Control<strong>:</strong> no-store</mark>
 </p>
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“access_token”: “eyJhbGciOiJSUzI1NiIsInR5cCI6Ikp..sHQ”,</mark>
 </p>
-
 <p>
-
 <mark>“token_type”: “bearer”,</mark>
 </p>
-
 <p>
-
 <mark>“expires_in”: 86400,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce”: “tZignsnFbp”,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce_expires_in”: 86400</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### <span class="mark">3.3.3.6.3 Token Error Response</span>
@@ -2024,132 +1555,78 @@ The Issued Credential MUST be cryptographically bound to the identifier of the E
 <span class="mark">Below is a non-normative example of a proof parameter (dots in the middle of jwt for display purposes only), for the example of issuing a LEARCredential:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“proof_type”: “jwt”,</mark>
 </p>
-
 <p>
-
 <mark>“jwt”: “eyJraWQiOiJkaWQ6ZXhhb….aZKPxgihac0aW9EkL1nOzM”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">where the JWT looks like this:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“typ”: “openid4vci-proof+jwt”,</mark>
 </p>
-
 <p>
-
 <mark>“alg”: “ES256”,</mark>
 </p>
-
 <p>
-
 <mark>“kid”:“did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“iss”: “s6BhdRkqt3”,</mark>
 </p>
-
 <p>
-
 <mark>“aud”: “https://www.goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“iat”: 1659145924,</mark>
 </p>
-
 <p>
-
 <mark>“nonce”: “tZignsnFbp”</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">In the example of a LEARCredential, the wallet generates a pair of public/private keys and a did:key identifier which is univocally related to the public key. This is the reason why the kid field above is exactly the DID identifier under this DID method. The did:key method is very simple and achieves a very high degree of privacy, allowing the creation of many different identifiers which can be one-use only if so desired.</span>
@@ -2173,74 +1650,44 @@ The Issued Credential MUST be cryptographically bound to the identifier of the E
 <span class="mark">Below is a non-normative example of a Credential Response:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark><strong>HTTP/</strong>1.1 200 <strong>OK</strong></mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/json</mark>
 </p>
-
 <p>
-
 <mark>Cache-Control<strong>:</strong> no-store</mark>
 </p>
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“format”: “jwt_vc_json”,</mark>
 </p>
-
 <p>
-
 <mark>“credential” : “LUpixVCWJk0eOt4CXQe1NXK….WZwmhmn9OQp6YxX0a2L”,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce”: “fGFF7UkhLa”,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce_expires_in”: 86400</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### <span class="mark">3.3.3.7.4 Credential Error Response</span>
@@ -2254,79 +1701,47 @@ Upon receiving a Credential Request, the Credential Issuer MUST require the Wall
 <span class="mark">Below is a non-normative example of a Credential Response with the Credential Issuer requesting a Wallet to provide in a subsequent Credential Request a proof that is bound to a c_nonce:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark><strong>HTTP/</strong>1.1 400 <strong>Bad Request</strong></mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/json</mark>
 </p>
-
 <p>
-
 <mark>Cache-Control<strong>:</strong> no-store</mark>
 </p>
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“error”: “invalid_or_missing_proof”,</mark>
 </p>
-
 <p>
-
 <mark>“error_description”:</mark>
 </p>
-
 <p>
-
 <mark>“Credential Issuer requires proof to be bound to a Credential Issuer provided nonce.”,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce”: “8YE9hCnyV2”,</mark>
 </p>
-
 <p>
-
 <mark>“c_nonce_expires_in”: 86400</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ### 3.3.4 Authenticating with Verifiable Credentials
@@ -2406,38 +1821,22 @@ We use a QR code to start the process and allow the wallet to receive the Author
   A QR code is used because a Self-Issued OP may be running locally as a native application or PWA, the RP may not have a network-addressable endpoint to communicate directly with the OP. We have to leverage the implicit flow of OpenID Connect to communicate with such locally-running Ops, as described in \[[OpenID.SIOP2](https://alastria.github.io/did-method-elsi/authnplain.xhtml#bib-openid.siop2)\].</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <blockquote>
-
 <p>
-
 <mark>https://verifier.dome-marketplace.eu/authorization-requests?state<strong>=</strong>af0ifjsldkj</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 *<span class="mark">[**<u>5</u>**](https://alastria.github.io/did-method-elsi/authnplain.xhtml#1068.5) The QR code is displayed in the user browser with instructions to scan it and go to the URL inside it.</span>*
@@ -2489,69 +1888,41 @@ The parameters comprising a request for verifiable presentations are given in se
 <span class="mark">This is an example request object using the definitions above:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>openid://?</mark>
 </p>
-
 <p>
-
 <mark>scope<strong>=</strong>dome.credentials.presentation.LEARCredential&</mark>
 </p>
-
 <p>
-
 <mark>response_type<strong>=</strong>vp_token&</mark>
 </p>
-
 <p>
-
 <mark>response_mode<strong>=</strong>direct_post&</mark>
 </p>
-
 <p>
-
 <mark>client_id<strong>=</strong>did:elsi:VATFR-99999999&</mark>
 </p>
-
 <p>
-
 <mark>redirect_uri<strong>=</strong>https://verifier.dome-marketplace.eu/api/authentication_response&</mark>
 </p>
-
 <p>
-
 <mark>state<strong>=</strong>af0ifjsldkj&</mark>
 </p>
-
 <p>
-
 <mark>nonce<strong>=</strong>n-0S6_WzA2Mj</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">(URL encoding removed, line breaks and leading spaces added for readability).</span>
@@ -2561,69 +1932,41 @@ The parameters comprising a request for verifiable presentations are given in se
 <span class="mark">This is an example of the unencoded contents of the payload of the JWT:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“iss”: “did:elsi:VATFR-99999999”, <em>// Should correspond with the client_id in the AR</em></mark>
 </p>
-
 <p>
-
 <mark>“sub”: “did:elsi:VATFR-99999999”, <em>// Should correspond with the client_id in the AR</em></mark>
 </p>
-
 <p>
-
 <mark>“aud”: “https://self-issued.me/v2”, <em>// As specified in section 5.5 of OIDC4VP</em></mark>
 </p>
-
 <p>
-
 <mark>“iat”: 1667194901,</mark>
 </p>
-
 <p>
-
 <mark>“exp”: 1667194961, <em>// To avoid replays, here it expires in 60 secs</em></mark>
 </p>
-
 <p>
-
 <mark>“auth_request”: “openid://?scope=…&amp;response_type=vp_token&amp;…”,</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 <span class="mark">Where the claims iss and sub *MUST* be the DID of the RP (in this case DOME onboarding) and *MUST* correspond exactly with the client_id parameter in the Authorization Request. The claim auth_request contains the Authentication Request as a string. The expiration time in claim exp avoids replays and can be very short because it is used by the Wallet just on reception of the Authentication Request. The expiration time should be enough for the user to review the Authorization Request, decide the credential(s) to send to the RP and instruct the Wallet to send the Authorization Reply to the RP.</span>
@@ -2660,101 +2003,59 @@ The parameters comprising a request for verifiable presentations are given in se
   The contents of the Authorization Response in our specific use case are:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>presentation_submission<strong>=</strong>\[see definition below\]</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>&vp_token<strong>=</strong>\[see definition below\]</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
   The content of the presentation_submission parameter in the above Authorization Response is:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“definition_id”: “OnboardingPresentationDefinition”,</mark>
 </p>
-
 <p>
-
 <mark>“id”: “OnboardingPresentationSubmission”,</mark>
 </p>
-
 <p>
-
 <mark>“descriptor_map”: \[</mark>\]</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
@@ -2763,58 +2064,34 @@ The parameters comprising a request for verifiable presentations are given in se
   <span class="mark">[**<u>14</u>**](https://alastria.github.io/did-method-elsi/authnplain.xhtml#1248.14) The wallet sends the Authorization Response to the endpoint received in the redirect_uri parameter of the Authorization Request, sending an HTTP POST request using the encoding application/x-www-form-urlencoded.</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark><strong>POST</strong> /api/siop/authorization_response <strong>HTTP/</strong>1.1</mark>
 </p>
-
 <p>
-
 <mark>Host<strong>:</strong> verifier.dome-onboarding.org</mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/x-www-form-urlencoded</mark>
 </p>
-
 <p>
-
 <mark>presentation_submission=\[see definition below\]</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>&vp_token=\[see definition below\]</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 #### 3.3.4.6 Authenticating the user with the LEARCredential
@@ -2842,88 +2119,52 @@ The parameters comprising a request for verifiable presentations are given in se
   For our use case, the payload of the JWT access token looks like:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“iss”: “did:elsi:VATFR-99999999”,</mark>
 </p>
-
 <p>
-
 <mark>“sub”: “did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”,</mark>
 </p>
-
 <p>
-
 <mark>“aud”: “https://dome-marketplace.eu/onboarding”,</mark>
 </p>
-
 <p>
-
 <mark>“exp”: 1639528912,</mark>
 </p>
-
 <p>
-
 <mark>“iat”: 1618354090,</mark>
 </p>
-
 <p>
-
 <mark>“jti” : “dbe39bf3a3ba4238a513f51d6e1691c4”,</mark>
 </p>
-
 <p>
-
 <mark>“client_id”: “did:elsi:VATFR-99999999”,</mark>
 </p>
-
 <p>
-
 <mark>“scope”: “vp_token”,</mark>
 </p>
-
 <p>
-
 <mark>“verifiableCredential”: \[“the VC that was received inside the Verifiable Presentation”\]</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
@@ -2952,58 +2193,34 @@ The parameters comprising a request for verifiable presentations are given in se
   <span class="mark">The notification is a simple POST request with both parameters in the body:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <mark><strong>POST</strong> /api/notify <strong>HTTP/</strong>1.1</mark>
 </p>
-
 <p>
-
 <mark>Host<strong>:</strong> dome-marketplace.eu</mark>
 </p>
-
 <p>
-
 <mark>Content-Type<strong>:</strong> application/x-www-form-urlencoded</mark>
 </p>
-
 <p>
-
 <mark>access_token=\[the access token\]</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>&state=af0ifjsldkj</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
@@ -3058,246 +2275,146 @@ Every request to a protected resource is intercepted by the PEP , and to know if
   An example access token would be:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“token_type”: “Bearer”,</mark>
 </p>
-
 <p>
-
 <mark>“expires_in”: 3600,</mark>
 </p>
-
 <p>
-
 <mark>“access_token”: “ewogICJhbGciOiAiR…ERBIgogIH0KfQ”</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
   Decoding the access_token field we could see a Verifiable Presentation including the LEARCredential that the user presented when authenticating:</span>
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <mark>{</mark>
 </p>
-
 <p>
-
 <mark>“@context”: \[</mark>\],</mark>
 </p>
-
 <p>
-
 <mark>“id”: “urn:did:elsi:25159389-8dd17b796ac0”,</mark>
 </p>
-
 <p>
-
 <mark>“type”: \[“VerifiableCredential”, “LEARCredential”\],</mark>
 </p>
-
 <p>
-
 <mark>“issuer”: {</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:elsi:VATES-12345678”</mark>
 </p>
-
 <p>
-
 <mark>},</mark>
 </p>
-
 <p>
-
 <mark>“issuanceDate”: “2022-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“validFrom”: “2022-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“expirationDate”: “2023-03-22T14:00:00Z”,</mark>
 </p>
-
 <p>
-
 <mark>“credentialSubject”: {</mark>
 </p>
-
 <p>
-
 <mark>“id”: “did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK”,</mark>
 </p>
-
 <p>
-
 <mark>“title”: “Mr.”,</mark>
 </p>
-
 <p>
-
 <mark>“first_name”: “John”,</mark>
 </p>
-
 <p>
-
 <mark>“last_name”: “Doe”,</mark>
 </p>
-
 <p>
-
 <mark>“gender”: “M”,</mark>
 </p>
-
 <p>
-
 <mark>“postal_address”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“email”: “johndoe@goodair.com”,</mark>
 </p>
-
 <p>
-
 <mark>“telephone”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“fax”: ““,</mark>
 </p>
-
 <p>
-
 <mark>“mobile_phone”: “+34787426623”,</mark>
 </p>
-
 <p>
-
 <mark>“legalRepresentative”: {</mark>
 </p>
-
 <p>
-
 <mark>“cn”: “56565656V Jesus Ruiz”,</mark>
 </p>
-
 <p>
-
 <mark>“serialNumber”: “56565656V”,</mark>
 </p>
-
 <p>
-
 <mark>“organizationIdentifier”: “VATES-12345678”,</mark>
 </p>
-
 <p>
-
 <mark>“o”: “GoodAir”,</mark>
 </p>
-
 <p>
-
 <mark>“c”: “ES”</mark>
 </p>
-
 <p>
-
 <mark>},</mark>
 </p>
-
 <p>
-
 <mark>“rolesAndDuties”: \[</mark>\]</mark>
 </p>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 <blockquote>
-
 <p>
-
 <mark>}</mark>
 </p>
-
 </blockquote>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 - <span class="mark">  
@@ -3548,19 +2665,12 @@ The process of acquiring access to the air quality monitoring service is display
 > The Authentication Request travels in the response to the HTTP GET request performed in the previous point, as a JWT signed by the marketplace. The decoded contents of the JWT may be:
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 90%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 openid://?<br />
 scope=openid<br />
 &response_type=vp_token<br />
@@ -3574,15 +2684,10 @@ scope=openid<br />
 }<br />
 &nonce=n-0S6_WzA2Mj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The employee’s wallet receives the Presentation Request and performs an **OID4VP presentation flow**, constructing a Verifiable Presentation and returning it to the Marketplace via the redirect_uri using the standard OID4VP **vp_token** and **presentation_submission** parameters. The wallet signs the response following the OID4VP specification, ensuring cryptographic holder binding and standard-compliant response formatting.
@@ -3594,19 +2699,12 @@ scope=openid<br />
 7.  The wallet receives the DID Document of Marketplace, with trusted information about the entity, including the Public Key associated with the Private Key that Marketplace uses to digitally sign tokens. For example:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “payload”: {<br />
 “@context”: \[<br />
@@ -3650,15 +2748,10 @@ scope=openid<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 8.  The DID Document includes one or more public keys inside the “verificationMethod” array. The keys are identified by the “id” field in each element of the array. The employee wallet uses the **kid** field that was received in the Authentication Request (in the protected header of the JWT) to select the corresponding Public Key and verify the signature of the JWT. It also verifies that the top-level “**id**” field in the DID Document (“did:elsi:EU.EORI.NLMARKETPLA”) is equal to the **client_id** parameter of the Authentication Request.
@@ -3668,19 +2761,12 @@ scope=openid<br />
 10. The wallet sends the OID4VP presentation response to the endpoint specified in the redirect_uri parameter of the Presentation Request, using an HTTP POST with application/x-www-form-urlencoded encoding.
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 90%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 POST /siop_sessions HTTP/1.1<br />
 Host: marketplace.dome.org<br />
 Content-Type: application/x-www-form-urlencoded<br />
@@ -3688,15 +2774,10 @@ Content-Type: application/x-www-form-urlencoded<br />
 vp_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 &state=af0ifjsldkj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The **sub** claim is *did:peer:99ab5bca41bb45b78d242a46f0157b7d* which is the DID of the user and for privacy reasons it is **not registered in any DLT or centralised repository**. It must be the same as the DID included in the Verifiable Credential that was issued by the company/organisation when onboarding the employee and which travels in the authentication response.
@@ -3704,19 +2785,12 @@ vp_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 > The **vp_token** includes the Verifiable Presentation, which can be in two formats: **jwt_vp** (JWT encoded) or **ldp_vp** (JSON-LD encoded). The following example is using the JWT encoding:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “format”:“jwt_vp”,<br />
 “presentation”:<br />
@@ -3737,33 +2811,21 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 –7kLsyBAfQGbg”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > Which decoded could be:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “@context”: \[“https://www.w3.org/2018/credentials/v1”\],<br />
 “type”: \[“VerifiablePresentation”\],<br />
@@ -3809,15 +2871,10 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 }<br />\]<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 11. Marketplace uses its own DLT node or the one from a trusted entity implementing the Universal Resolver functionality to resolve the DID of the employee’s company, which is inside the Verifiable Credential received in the Verifiable Presentation. This DID can be found in the “issuer” field of the “verifiableCredential” structure above.
@@ -3871,19 +2928,12 @@ The following gives a detailed description of the process of accessing the servi
 > The Authentication Request travels in the response to the HTTP GET request performed in the previous point, as a JWT signed by Packet Delivery company. An example of the Presentation Request encoded as a signed JWT may conceptually look like:
 
 <table style="width:100%;">
-
 <colgroup>
-
 <col style="width: 99%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 openid://?<br />
 client_id=did:elsi:EU.EORI.NLPACKETDEL<br />
 &redirect_uri=https%3A%2F%2Fidp-pdc.fiware.io%2Fsiop_sessions<br />
@@ -3891,15 +2941,10 @@ client_id=did:elsi:EU.EORI.NLPACKETDEL<br />
 &state=af0ifjsldkj<br />
 &nonce=n-0S6_WzA2Mj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 6.  The user’s wallet receives the Presentation Request and produces an OID4VP Verifiable Presentation, returning it as a vp_token together with a presentation_submission descriptor. The response is posted to the redirect_uri defined by the Air Quality Monitoring IDP using the method mandated by OID4VP.In this step the user verifies that the Air Quality Monitoring company is a trusted entity belonging to the ecosystem, by resolving the DID of the Air Quality Monitoring company which is received in the **client_id** parameter of the Authentication Request.
@@ -3909,19 +2954,12 @@ client_id=did:elsi:EU.EORI.NLPACKETDEL<br />
 7.  The wallet receives the DID Document of the Air Quality Monitoring company, with trusted information about the company, including the Public Key associated with the Private Key that Packet Delivery company uses to digitally sign tokens. For example:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “payload”: {<br />
 “@context”: \[<br />
@@ -3965,15 +3003,10 @@ client_id=did:elsi:EU.EORI.NLPACKETDEL<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 8.  The DID Document includes one or more public keys inside the “verificationMethod” array. The keys are identified by the “id” field in each element of the array. The user wallet uses the kid field that was received in the Authentication Request (in the protected header of the JWT) to select the corresponding Public Key and verify the signature of the JWT. It also verifies that the top-level “id” field in the DID Document (“did:elsi:EU.EORI.NLPACKETDEL”) is equal to the **client_id** parameter of the Authentication Request.
@@ -3983,19 +3016,12 @@ client_id=did:elsi:EU.EORI.NLPACKETDEL<br />
 10. The wallet sends the OID4VP presentation response to the endpoint specified in the redirect_uri parameter of the Presentation Request, using an HTTP POST request with application/x-www-form-urlencoded encoding. .
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 POST /siop_sessions HTTP/1.1<br />
 Host: client.example.com<br />
 Content-Type: application/x-www-form-urlencoded<br />
@@ -4003,15 +3029,10 @@ Content-Type: application/x-www-form-urlencoded<br />
 vp_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 &state=af0ifjsldkj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The **sub-claim** is *did:peer:99ab5bca41bb45b78d242a46f0157b7d* which is the DID of the user and that is not registered in any DLT or centralised repository. It must be the same as the DID included in the VP that was issued by the user\`s company when onboarding her and which travels in the authentication response.
@@ -4019,19 +3040,12 @@ vp_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 > The **vp_token** includes the Verifiable Presentation, which can be in two formats: **jwt_vp** (JWT encoded) or **ldp_vp** (JSON-LD encoded). The following example is using the JWT encoding:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “format”:“jwt_vp”,<br />
 “presentation”:<br />
@@ -4052,33 +3066,21 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 –7kLsyBAfQGbg”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > Which decoded could be:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “@context”: \[“https://www.w3.org/2018/credentials/v1”\],<br />
 “type”: \[“VerifiablePresentation”\],<br />
@@ -4124,15 +3126,10 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 }<br />\]<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 11. The Air Quality Monitoring company uses its own DLT node implementing the Universal Resolver functionality to resolve the DID of the user’s company, which is inside the Verifiable Credential received in the Verifiable Presentation. This DID can be found in the “issuer” field of the “verifiableCredential” structure above.
@@ -4168,19 +3165,12 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 19. The Air Quality Monitoring company portal/app sends a request to Air Quality Monitoring proxy (API gateway + PEP), in order to get the temperature measurement entity in the park. The request contains the Access Token generated in step 15, with information about the authorisation registry to retrieve policies from.
 
 <table style="width:93%;">
-
 <colgroup>
-
 <col style="width: 93%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 \> Authorization: Bearer IIeD…NIQ // Bearer JWT<br />
 \> Content-Type: application/json<br />
 <br />
@@ -4206,15 +3196,10 @@ Decoded Bearer JWT payload:<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 20. The Air Quality Monitoring company proxy received the request of step 19 for reading the current temperature measurement entity at the park. The Access Token received from the user ensures that she was assigned the delegation evidence with a policy for reading the temperature entity for this specific location (called issuance at **user level**). Furthermore, since in this scenario the required user policy was issued by a 3rd party (the user’s company), the proxy has to check whether the user’s company itself is allowed to delegate this policy. In general, the rule would be that the proxy needs to check the existence of valid policies through the chain of issuers, until itself (in this case the Air Quality Monitoring company) is the issuer. In this scenario, the proxy will check policies at two different levels: issued at **organisational level** (from the Air Quality Monitoring company to the user’s company) and issued at **user level** (from the user’s company to the user. The Verifiable Credential takes care of the user level policies.
@@ -4294,153 +3279,89 @@ This is implemented because the P.Info system offers access to data about DELIVE
 PacketDelivery has defined two roles “P.Info.standard” and “P.Info.gold” for the P.Info system based on which the operations that can be requested on the above attributes through the Context Broker service it publishes have been defined. To simplify the description of the scenario, we will focus on attributes deliveryAddress, PDA and PTA since we could assume that the other ones will be assigned values at the time an order is created, will be always readable but will not be able to be changed by users with the defined roles. In that sense, the following policies apply for the defined roles regarding modification of these three attributes (deliveryAddress, PDA, PTA) once an order has been created:
 
 <table style="width:94%;">
-
 <colgroup>
-
 <col style="width: 28%" />
-
 <col style="width: 29%" />
-
 <col style="width: 36%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: center;">
-
 <strong>Path:</strong>
 </th>
-
 <th colspan="2" style="text-align: center;">
-
 <strong>Verb</strong>
 </th>
-
 </tr>
-
 <tr>
-
 <th>
-
 <strong>/ngsi-ld/v1/entities/{entityID}/attrs/{attrName}</strong>
 </th>
-
 <th style="text-align: center;">
-
 <strong>GET</strong>
 </th>
-
 <th style="text-align: center;">
-
 <strong>PATCH</strong>
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 deliveryAddress
 </th>
-
 <th style="text-align: left;">
-
 P.Info.standard/gold
 </th>
-
 <th style="text-align: left;">
-
 P.Info.gold
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 EDA
 </th>
-
 <th style="text-align: left;">
-
 P.Info.standard/gold
 </th>
-
 <th style="text-align: left;">
-
 —
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 ETA
 </th>
-
 <th style="text-align: left;">
-
 P.Info.standard/gold
 </th>
-
 <th style="text-align: left;">
-
 —
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 PDA
 </th>
-
 <th style="text-align: left;">
-
 P.Info.standard/gold
 </th>
-
 <th style="text-align: left;">
-
 P.Info.gold
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 PTA
 </th>
-
 <th style="text-align: left;">
-
 P.Info.standard/gold
 </th>
-
 <th style="text-align: left;">
-
 P.Info.gold
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 Note that orders will be created using POST but with a different path (/ngsi-ld/v1/entities/). For issuing such requests an additional role “P.Create” is defined which will be assigned to the retailers Happy Pets and No Cheaper only.
@@ -4586,19 +3507,12 @@ That public key corresponds to a private key that was generated in the employee 
 Below we present an example employee credential issued by Packet Delivery.
 
 <table style="width:94%;">
-
 <colgroup>
-
 <col style="width: 94%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 // Credential issued by PacketDelivery to its employees, providing access to<br />
 // Marketplace, either to create offerings or to purchase offerings.<br />
 {<br />
@@ -4641,15 +3555,10 @@ Below we present an example employee credential issued by Packet Delivery.
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 The structure of the above credential can be visualized as follows:
@@ -4687,19 +3596,12 @@ A UUID Version 4 complies with all those requirements but other schemas can be u
 The employee credential issued by Happy Pets and No Cheaper companies to its employees are virtually identical to the employee credential from Packet Delivery described above. The main difference is the set of roles assigned to the employee and specified in the “roles” claim.
 
 <table style="width:95%;">
-
 <colgroup>
-
 <col style="width: 95%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 // Credential issued by HappyPets to its employees, providing access<br />
 // to order creation in PacketDelivery.<br />
 {<br />
@@ -4742,15 +3644,10 @@ The employee credential issued by Happy Pets and No Cheaper companies to its emp
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### 3.4.3.2.3 Customer of Happy Pets (or No Cheaper)
@@ -4764,19 +3661,12 @@ It follows the same model as with employee credentials except that:
 - The role included in the credential corresponds to the type of customer, with the role name defined and understood by the service provider, in this case Packet Delivery.
 
 <table style="width:97%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 // Credential issued by HappyPets to a customer,<br />
 // providing access to Gold services at PacketDelivery.<br />
 {<br />
@@ -4819,15 +3709,10 @@ It follows the same model as with employee credentials except that:
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ##### 3.4.3.2.4 Role-based access
@@ -4873,54 +3758,32 @@ In the following, a description is given for each of the sequence steps.
 > The Authentication Request travels in the response to the HTTP GET request performed in the previous point, as a JWT signed by Marketplace. The decoded contents of the JWT may be:
 
 <table style="width:93%;">
-
 <colgroup>
-
 <col style="width: 92%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 openid://?client_id=did:elsi:EU.EORI.NLMARKETPLA
 </p>
-
 <p>
-
 &redirect_uri=https://marketplace.dome.org/siop_sessions
 </p>
-
 <p>
-
 &nonce=n-0S6_WzA2Mj
 </p>
-
 <p>
-
 &state=af0ifjsldkj
 </p>
-
 <p>
-
 &presentation_definition=…
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The employee’s wallet receives the Presentation Request and constructs an OID4VP Verifiable Presentation, returning it to the Marketplace using the required vp_token and presentation_submission fields defined by the OID4VP 1.0 specification..
@@ -4932,19 +3795,12 @@ openid://?client_id=did:elsi:EU.EORI.NLMARKETPLA
 7.  The wallet receives the DID Document of Marketplace, with trusted information about the entity, including the Public Key associated with the Private Key that Marketplace uses to digitally sign tokens. For example:
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 90%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “payload”: {<br />
 “@context”: \[<br />
@@ -4988,15 +3844,10 @@ openid://?client_id=did:elsi:EU.EORI.NLMARKETPLA
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 8.  The DID Document includes one or more public keys inside the “verificationMethod” array. The keys are identified by the “id” field in each element of the array. The employee wallet uses the **kid** field that was received in the Authentication Request (in the protected header of the JWT) to select the corresponding Public Key and verify the signature of the JWT. It also verifies that the top-level “**id**” field in the DID Document (“did:elsi:EU.EORI.NLMARKETPLA”) is equal to the **client_id** parameter of the Authentication Request.
@@ -5006,77 +3857,46 @@ openid://?client_id=did:elsi:EU.EORI.NLMARKETPLA
 10. The Wallet sends the OID4VP Response to the endpoint indicated in the redirect_uri parameter using an HTTP POST request with application/x-www-form-urlencoded encoding. The response contains an ID Token (used only to carry protocol parameters such as sub, aud, and nonce) and a Verifiable Presentation (vp_token) as defined in OpenID for Verifiable Presentations.
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 90%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 POST /siop_sessions HTTP/1.1
 </p>
-
 <p>
-
 Host: marketplace.dome.org
 </p>
-
 <p>
-
 Content-Type: application/x-www-form-urlencoded
 </p>
-
 <p>
-
 id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso
 </p>
-
 <p>
-
 &vp_token=…
 </p>
-
 <p>
-
 &state=af0ifjsldkj
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The decoded **id_token** would be:
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 90%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “iss”: “https://self-issued.me/v2”,<br />
 “aud”: “did:elsi:EU.EORI.NLMARKETPLA”,<br />
@@ -5087,15 +3907,10 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso
 “nonce”: “n-0S6_WzA2Mj”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The **sub** claim is *did:peer:99ab5bca41bb45b78d242a46f0157b7d* which is the DID of the user and for privacy reasons it is not registered in any DLT or centralized repository. It must be the same as the DID included in the Verifiable Credential that was issued by the Packet Delivery company when onboarding the employee and which travels in the authentication response.
@@ -5103,19 +3918,12 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso
 > The **vp_token** includes the Verifiable Presentation, which can be in two formats: **jwt_vp** (JWT encoded) or **ldp_vp** (JSON-LD encoded). The following example is using the JWT encoding:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “format”: “jwt_vp”,<br />
 “presentation”:<br />
@@ -5136,33 +3944,21 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 –7kLsyBAfQGbg”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > Which decoded would be:
 
 <table style="width:94%;">
-
 <colgroup>
-
 <col style="width: 94%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 {<br />
 “@context”: \[“https://www.w3.org/2018/credentials/v1”\],<br />
 “type”: \[“VerifiablePresentation”\],<br />
@@ -5208,15 +4004,10 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 }<br />\]<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 11. Marketplace uses its own DLT node or the one from a trusted entity implementing the Universal Resolver functionality to resolve the DID of Packet Delivery Co, which is inside the Verifiable Credential received in the Verifiable Presentation. This DID can be found in the “issuer” field of the “verifiableCredential” structure above.
@@ -5276,19 +4067,12 @@ In the following we describe the authentication process for employees of Happy P
 > The Authentication Request travels in the response to the HTTP GET request performed in the previous point, as a JWT signed by Packet Delivery company. The decoded contents of the JWT may be:
 
 <table style="width:89%;">
-
 <colgroup>
-
 <col style="width: 89%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 openid://?<br />
 scope=openid<br />
 &response_type=id_token<br />
@@ -5302,15 +4086,10 @@ scope=openid<br />
 }<br />
 &nonce=n-0S6_WzA2Mj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The Presentation Request is returned to the employee’s Wallet, which processes it according to OID4VP 1.0. The Wallet evaluates the requested claims and prepares a corresponding Verifiable Presentation that satisfies the Marketplace requirements. The OID4VP flow uses the response_mode=post mechanism, which instructs the Wallet to deliver the OID4VP Response (containing an id_token and vp_token) to the redirect_uri provided by the Marketplace. The endpoint to which the Wallet must deliver the OID4VP Response is defined in the standard redirect_uri parameter.
@@ -5322,19 +4101,12 @@ scope=openid<br />
 7.  The wallet receives the DID Document of Marketplace, with trusted information about the entity, including the Public Key associated with the Private Key that Marketplace uses to digitally sign tokens. For example:
 
 <table style="width:86%;">
-
 <colgroup>
-
 <col style="width: 85%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “payload”: {<br />
 “@context”: \[<br />
@@ -5378,15 +4150,10 @@ scope=openid<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 8.  The DID Document includes one or more public keys inside the “verificationMethod” array. The keys are identified by the “id” field in each element of the array. The employee wallet uses the **kid** field that was received in the Authentication Request (in the protected header of the JWT) to select the corresponding Public Key and verify the signature of the JWT. It also verifies that the top-level “**id**” field in the DID Document (“did:elsi:EU.EORI.NLMARKETPLA”) is equal to the **client_id** parameter of the Authentication Request.
@@ -5396,19 +4163,12 @@ scope=openid<br />
 10. The Wallet sends the OID4VP Response to the endpoint indicated in the redirect_uri parameter using an HTTP POST request with application/x-www-form-urlencoded encoding. The response contains an ID Token (used only as a protocol artefact carrying parameters such as sub, aud, and nonce) and a Verifiable Presentation token (vp_token) as defined in the OpenID for Verifiable Presentations (OID4VP 1.0) specification.
 
 <table style="width:88%;">
-
 <colgroup>
-
 <col style="width: 87%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 POST /siop_sessions HTTP/1.1<br />
 Host: marketplace.dome.org<br />
 Content-Type: application/x-www-form-urlencoded<br />
@@ -5417,33 +4177,21 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 &vp_token=…<br />
 &state=af0ifjsldkj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The decoded **id_token** would be:
 
 <table style="width:89%;">
-
 <colgroup>
-
 <col style="width: 89%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “iss”:“https://self-issued.me/v2”,<br />
 “aud”:“did:elsi:EU.EORI.NLMARKETPLA”,<br />
@@ -5454,15 +4202,10 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 “nonce”:“n-0S6_WzA2Mj”,<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The **sub** claim is *did:peer:99ab5bca41bb45b78d242a46f0157b7d* which is the DID of the user and for privacy reasons it is **not registered in any DLT or centralised repository**. It must be the same as the DID included in the Verifiable Credential that was issued by the Happy Pets company when onboarding the employee and which travels in the authentication response.
@@ -5470,19 +4213,12 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 > The **vp_token** includes the Verifiable Presentation, which can be in two formats: **jwt_vp** (JWT encoded) or **ldp_vp** (JSON-LD encoded). The following example is using the JWT encoding:
 
 <table style="width:90%;">
-
 <colgroup>
-
 <col style="width: 89%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “format”:“jwt_vp”,<br />
 “presentation”:<br />
@@ -5495,33 +4231,21 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 –7kLsyBAfQGbg”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > Which decoded could be:
 
 <table style="width:88%;">
-
 <colgroup>
-
 <col style="width: 87%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “@context”: \[“https://www.w3.org/2018/credentials/v1”\],<br />
 “type”: \[“VerifiablePresentation”\],<br />
@@ -5567,15 +4291,10 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 }<br />\]<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 11. Marketplace uses its own DLT node or the one from a trusted entity implementing the Universal Resolver functionality to resolve the DID of Happy Pets, which is inside the Verifiable Credential received in the Verifiable Presentation. This DID can be found in the “issuer” field of the “verifiableCredential” structure above.
@@ -5643,19 +4362,12 @@ In the following, a description is given for each of the sequence steps.
 > The Authentication Request travels in the response to the HTTP GET request performed in the previous point, as a JWT signed by Packet Delivery company. The decoded contents of the JWT may be:
 
 <table style="width:91%;">
-
 <colgroup>
-
 <col style="width: 91%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 openid://?<br />
 response_type=id_token<br />
 &response_mode=post<br />
@@ -5667,15 +4379,10 @@ response_type=id_token<br />
 &registration=%7B%22subject_syntax_types_supported%22:%5B%22did%22%5D,<br />
 %22id_token_signing_alg_values_supported%22:%5B%22RS256%22%5D%7
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The customer wallet processes the Presentation Request and generates an OID4VP-compliant Verifiable Presentation, signed by the wallet and returned as vp_token + presentation_submission to the Packet Delivery redirect_uri.
@@ -5687,19 +4394,12 @@ response_type=id_token<br />
 7.  The wallet receives the DID Document of Packet Delivery company, with trusted information about the company, including the Public Key associated with the Private Key that Packet Delivery company uses to digitally sign tokens. For example:
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “payload”: {<br />
 “@context”: \[<br />
@@ -5743,15 +4443,10 @@ response_type=id_token<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 8.  The DID Document includes one or more public keys inside the “verificationMethod” array. The keys are identified by the “id” field in each element of the array. The customer wallet uses the kid field that was received in the Authentication Request (in the protected header of the JWT) to select the corresponding Public Key and verify the signature of the JWT. It also verifies that the top-level “id” field in the DID Document (“did:elsi:EU.EORI.NLPACKETDEL”) is equal to the **client_id** parameter of the Authentication Request.
@@ -5761,19 +4456,12 @@ response_type=id_token<br />
 10. The Wallet sends the OID4VP Response to the endpoint indicated in the redirect_uri parameter using an HTTP POST request with application/x-www-form-urlencoded encoding. The response contains an ID Token (used solely as a protocol artefact carrying binding parameters such as sub, aud, and nonce) and a Verifiable Presentation token (vp_token) as defined in the OpenID for Verifiable Presentations (OID4VP 1.0) specification.
 
 <table style="width:89%;">
-
 <colgroup>
-
 <col style="width: 89%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 POST /siop_sessions HTTP/1.1<br />
 Host: client.example.com<br />
 Content-Type: application/x-www-form-urlencoded<br />
@@ -5782,33 +4470,21 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 &vp_token=…<br />
 &state=af0ifjsldkj
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The decoded **id_token** would be:
 
 <table style="width:88%;">
-
 <colgroup>
-
 <col style="width: 87%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “iss”: “https://self-issued.me/v2”,<br />
 “aud”: “did:elsi:EU.EORI.NLPACKETDEL”,<br />
@@ -5819,15 +4495,10 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 “nonce”: “n-0S6_WzA2Mj”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > The **sub** claim is *did:peer:99ab5bca41bb45b78d242a46f0157b7d* which is the DID of the user and that is not registered in any DLT or centralized repository. It must be the same as the DID included in the VP that was issued by the Happy Pets company when onboarding the customer and which travels in the authentication response.
@@ -5835,19 +4506,12 @@ id_token=eyJ0 … NiJ9.eyJ1c … I6IjIifX0.DeWt4Qu … ZXso<br />
 > The **vp_token** includes the Verifiable Presentation, which can be in two formats: **jwt_vp** (JWT encoded) or **ldp_vp** (JSON-LD encoded). The following example is using the JWT encoding:
 
 <table style="width:98%;">
-
 <colgroup>
-
 <col style="width: 98%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “format”:“jwt_vp”,<br />
 “presentation”:<br />
@@ -5868,33 +4532,21 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 –7kLsyBAfQGbg”<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 > Which decoded could be:
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 {<br />
 “@context”: \[“https://www.w3.org/2018/credentials/v1”\],<br />
 “type”: \[“VerifiablePresentation”\],<br />
@@ -5940,15 +4592,10 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 }<br />\]<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 11. Packet Delivery company uses its own DLT node implementing the Universal Resolver functionality to resolve the DID of Happy Pets, which is inside the Verifiable Credential received in the Verifiable Presentation. This DID can be found in the “issuer” field of the “verifiableCredential” structure above.
@@ -5984,19 +4631,12 @@ txJy6M1-lD7a5HTzanYTWBPAUHDZGyGKXdJw-W_x0IWChBzI8t3kpG253fg6V3tPgHeKXE94fz_QpYfg
 19. Packet Delivery company portal/app sends a request to Packet Delivery company proxy, in order to change the PTA of the delivery order. The request contains the Access Token generated in step 15, with information about the authorisation registry to retrieve policies from.
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 \> Authorization: Bearer IIeD…NIQ // Bearer JWT<br />
 \> Content-Type: application/json<br />
 <br />
@@ -6023,15 +4663,10 @@ Decoded Bearer JWT payload:<br />
 }<br />
 }
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 20. Packet Delivery company proxy received the request of step 19 for changing the PTA of a delivery order. The Access Token received from the customer ensures that she was assigned the delegation evidence with a policy for updating the PTA attribute of this specific delivery order (called issuance at **user level**). Furthermore, since in this scenario the required customer policy was issued by a 3rd party (Happy Pets), the proxy has to check whether Happy Pets itself is allowed to delegate this policy. In general, the rule would be that the proxy needs to check the existence of valid policies through the chain of issuers, until itself (in this case the Packet Delivery company) is the issuer. In this scenario, the proxy will check policies at two different levels: issued at **organizational level** (from Packet Delivery company to Happy Pets) and issued at **user level** (from Happy Pets to customer). The Verifiable Credential takes care of the user level policies.

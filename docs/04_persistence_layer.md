@@ -208,20 +208,20 @@ Consensus protocols are fundamental to the functioning of decentralised networks
 
 - **Synchronisation D**elay: Network synchronisation delays might impact QFBT’s performance and efficiency. In any case, it is always much better than PoW or PoS.
 
-| **Consensus Protocol** | **Advantages** | **Disadvantages** |
-|----|----|----|
-| **Proof of Work (PoW)** | \- Security | \- Energy Consumption |
-|  | \- Decentralisation in early stages of the network | \- Centralization of Mining Power as the network matures |
-| **Proof of Stake (PoS)** | \- Energy Efficiency | \- Wealth Concentration |
-|  | \- Decentralization Incentive (only for entities that can stake). | \- Nothing at Stake |
-| **Delegated Proof of Stake (DPoS)** | \- Efficiency | \- Centralization Risk |
-|  | \- Sybil Resistance | \- Voter Apathy |
-| **Improved Finality Byzantine Fault Tolerance (IFBT)** | \- Finality | \- Limited Scalability |
-|  | \- Low Resource Consumption | \- Network Partitioning |
-| **Practical Byzantine Fault Tolerance (PFBT)** | \- Finality and Low Latency | \- Limited Decentralisation |
-|  | \- Fault Tolerance | \- Complexity |
-| **Quorum-Based Practical Byzantine Fault Tolerance (QFBT)** | \- Flexible Quorum Selection | \- Quorum Management |
-|  | \- High Throughput | \- Synchronisation Delay |
+| **Consensus Protocol**                                      | **Advantages**                                                    | **Disadvantages**                                        |
+|-------------------------------------------------------------|-------------------------------------------------------------------|----------------------------------------------------------|
+| **Proof of Work (PoW)**                                     | \- Security                                                       | \- Energy Consumption                                    |
+|                                                             | \- Decentralisation in early stages of the network                | \- Centralization of Mining Power as the network matures |
+| **Proof of Stake (PoS)**                                    | \- Energy Efficiency                                              | \- Wealth Concentration                                  |
+|                                                             | \- Decentralization Incentive (only for entities that can stake). | \- Nothing at Stake                                      |
+| **Delegated Proof of Stake (DPoS)**                         | \- Efficiency                                                     | \- Centralization Risk                                   |
+|                                                             | \- Sybil Resistance                                               | \- Voter Apathy                                          |
+| **Improved Finality Byzantine Fault Tolerance (IFBT)**      | \- Finality                                                       | \- Limited Scalability                                   |
+|                                                             | \- Low Resource Consumption                                       | \- Network Partitioning                                  |
+| **Practical Byzantine Fault Tolerance (PFBT)**              | \- Finality and Low Latency                                       | \- Limited Decentralisation                              |
+|                                                             | \- Fault Tolerance                                                | \- Complexity                                            |
+| **Quorum-Based Practical Byzantine Fault Tolerance (QFBT)** | \- Flexible Quorum Selection                                      | \- Quorum Management                                     |
+|                                                             | \- High Throughput                                                | \- Synchronisation Delay                                 |
 
 In conclusion, each consensus protocol has its own strengths and weaknesses, and the choice of which one to use depends on the specific requirements of the decentralised network and the trade-offs that the network developers are willing to make. Factors such as security, energy efficiency, decentralisation, and scalability play crucial roles in determining the most suitable consensus protocol for a given blockchain application.
 
@@ -668,108 +668,62 @@ Finally, policies can be applied on the origin/target Access Control Layer. This
 This section delves into implementation considerations concerning data within the DOME ecosystem. When implementing a new Marketplace in the ecosystem, establishing the initial connection with the Distributed Persistence Layer becomes of paramount importance. This connection enables the new Marketplace to retrieve all the essential data required to operate autonomously within the ecosystem. The initial data dump is facilitated through the configuration of the Access Node, ensuring a seamless transfer of the necessary information.
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 96%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th>
-
 <p>
-
 <strong>Note:</strong>
 </p>
-
 <p>
-
 In the current architecture the Access Node is bound to one and only one Participant (ex. service provider, marketplace) and multiple Participants cannot use the same Access Node.
 </p>
-
 <p>
-
 Binding an Access Node to a Participant means that a separate deployment of the Access Node is required for each Participant.
 </p>
-
 <p>
-
 Consequences of this model are:
 </p>
-
 <ol type="1">
-
 <li>
-
 <p>
-
 It raises the entry barrier in the DOME ecosystem for Participants, by conditioning participation in the federation on hosting an Access Node upfront.
 </p>
-
 </li>
-
 <li>
-
 <p>
-
 It denies Participants the ability to reduce operating costs when they could otherwise share the same Access Node in a trusted infrastructure.
 </p>
-
 </li>
-
 </ol>
-
 <p>
-
 It is planned that in a future iteration the Access Node will be implemented so as to be capable of hosting multiple Participants in isolation from each-other (i.e. make the Access Node multi-tenant capable). It will allow full API-driven configuration of the Access Node (i.e. via an Admin API)
 </p>
-
 <p>
-
 The benefits of this enhancement are:
 </p>
-
 <ol type="1">
-
 <li>
-
 <p>
-
 Lowers the entry barrier by allowing a Participant to onboard onto an already existing Access Node whose hoster it trusts, while still being able to migrate to a self-hosted Access Node at a later time.
 </p>
-
 </li>
-
 <li>
-
 <p>
-
 Allows Participants to save on hosting and operating costs by sharing a single Access Node as tenants.
 </p>
-
 </li>
-
 </ol>
-
 <p>
-
 As a concrete example in DOME, Dawex’ Data Exchange Platform technology allows customers to deploy and run their own Marketplaces as software-level tenants on a shared infrastructure, thus optimising hosting costs. In contrast to that, under the current constraints, the Dawex platform would have to create a full Access Node deployment for each tenant (as each tenant would be a distinct Participant in DOME). If the Access Node were capable of multi-tenant, the platform would need a single Access Node deployment to securely cater for all Participants.
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 However, it is crucial to emphasise that this initial data transfer must align with stringent security policies. As data is being transferred from the Distributed Persistence Layer to the new Marketplace, robust security measures must be in place to safeguard the integrity and confidentiality of the data.

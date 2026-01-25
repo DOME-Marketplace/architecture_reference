@@ -162,7 +162,7 @@ Conversely, a positive feedback in the test stage might lead to the ***‘Activa
 
 Categories that are planned to be removed will enter the ***‘Retired’*** state. This means that this category cannot be attached to any new offering/candidate but can still remain attached to older ones.
 
-Finally, when a ‘*Retired’* category is no longer held by any offering/candidate, it can be made ***‘Obsolete’**,* meaning that it can be safely removed from the environment.
+Finally, when a ’*Retired’* category is no longer held by any offering/candidate, it can be made ***‘Obsolete’**,* meaning that it can be safely removed from the environment.
 
 #### 5.3.2.2 Creating categories
 
@@ -1232,201 +1232,116 @@ Based on these inputs, the DOME Invoice Engine (see details in the next section)
 The following table summarize the different scenarios and rules:
 
 <table style="width:96%;">
-
 <colgroup>
-
 <col style="width: 23%" />
-
 <col style="width: 12%" />
-
 <col style="width: 23%" />
-
 <col style="width: 36%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 <strong>Scenario</strong>
 </th>
-
 <th style="text-align: left;">
-
 <strong>Apply VAT?</strong>
 </th>
-
 <th style="text-align: left;">
-
 <strong>Who Pays the VAT?</strong>
 </th>
-
 <th style="text-align: left;">
-
 <strong>Invoice Details</strong>
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <strong>Cross-border within EU</strong>
 </p>
-
 <p>
-
 <em>Italian Provider to Spanish Customer</em>
 </p>
-
 </th>
-
 <th style="text-align: left;">
-
 No
 </th>
-
 <th style="text-align: left;">
-
 Customer Self-accounts for VAT
 </th>
-
 <th style="text-align: left;">
-
 <p>
-
 <em>“Reverse charge applies – VAT to be accounted for by the recipient”</em>
 </p>
-
 <p>
-
 <em>Cite: “Art. 194 of Directive 2006/112/EC”</em>
 </p>
-
 <p>
-
 <em>Include both valid VAT IDs</em>
 </p>
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <strong>Same EU Country</strong>
 </p>
-
 <p>
-
 <em>Italian Provider to Italian Customer</em>
 </p>
-
 </th>
-
 <th style="text-align: left;">
-
 Yes
 </th>
-
 <th style="text-align: left;">
-
 Customer Pays to the Provider
 </th>
-
 <th style="text-align: left;">
-
 <p>
-
 <em>“VAT applied at \[eg. 22%\] according to domestic rules.”</em>
 </p>
-
 <p>
-
 <em>Show both VAT amount and total price</em>
 </p>
-
 <p>
-
 <em>Include both VAT IDs</em>
 </p>
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 <p>
-
 <strong>EU to Extra-EU</strong>
 </p>
-
 <p>
-
 <em>Italian Provider to Chinese Customer</em>
 </p>
-
 </th>
-
 <th style="text-align: left;">
-
 No
 </th>
-
 <th style="text-align: left;">
-
 <p>
-
 Customer
 </p>
-
 <p>
-
 May pay local taxes
 </p>
-
 </th>
-
 <th style="text-align: left;">
-
 <p>
-
 “VAT exempt – export of services to a non-EU country”
 </p>
-
 <p>
-
 Optionally cite: <em>“Outside the scope of EU VAT – Article 44 of Directive 2006/112/EC”</em>
 </p>
-
 <p>
-
 <em>Include VAT ID of provider only</em>
 </p>
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 *Table 5.1 - Invoice VAT scenarios and rules*
@@ -2966,2139 +2881,1206 @@ This paragraph provides some examples of use cases of interaction between DOME s
 The two tables included below must be completed by all Competence Centers that are involved in the Assistance. Here follow some examples of possible questions and how they are processed in the assistance workflow (Chatbot replies directly or messages are delivered to a specific competence centre).
 
 <table>
-
 <colgroup>
-
 <col style="width: 22%" />
-
 <col style="width: 10%" />
-
 <col style="width: 10%" />
-
 <col style="width: 11%" />
-
 <col style="width: 10%" />
-
 <col style="width: 10%" />
-
 <col style="width: 11%" />
-
 <col style="width: 11%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th rowspan="2" style="text-align: center;">
-
 Customer events
 </th>
-
 <th rowspan="2" style="text-align: center;">
-
 Onstage contact action : 1st level Service Desk<br />
 -<br />
 Chatbot
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 Billing competence center
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 Infrastructure competence center
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 DOME competence center
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 Privacy & compliance competence center
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 Account management competence center
 </th>
-
 <th style="text-align: center;">
-
 Backstage contact action<br />
 -<br />
 Products management competence center
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 <th style="text-align: left;">
-
 Support process action
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 General info request about DOME’s portal
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Billing % invoicing info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Billing & invoicing issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Infrastructure info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Infrastructure issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Web portal info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Web portal issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Catalog’s search info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Catalog’s search issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Account management info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Account management issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 3rd party App management (provisioning/deprovisioning) info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 3rd party App management (provisioning/deprovisioning) issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Product management (buyer & seller) info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Product management (buyer & seller) issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Privacy & compliance info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 Privacy & compliance issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 API integration info or issue with troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Info request identified -\> Search in the knowledge base -\> creation of the answer
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center is not involved if it documents routine procedures for training the chatbot
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: center;">
-
 API integration issue without troubleshooting routine implemented
 </th>
-
 <th style="text-align: center;">
-
 Open ticket to specific competence center
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: center;">
-
 Competence center take in charge the ticket, fix the problem and close the ticket
 </th>
-
 <th style="text-align: center;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 <th style="text-align: left;">
-
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
-
 <table>
-
 <colgroup>
-
 <col style="width: 19%" />
-
 <col style="width: 26%" />
-
 <col style="width: 27%" />
-
 <col style="width: 26%" />
-
 </colgroup>
-
 <thead>
-
 <tr>
-
 <th style="text-align: left;">
-
 Category
 </th>
-
 <th style="text-align: left;">
-
 Description
 </th>
-
 <th style="text-align: left;">
-
 Information queries
 </th>
-
 <th style="text-align: left;">
-
 Troubleshooting guide
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="14" style="text-align: left;">
-
 Billing & Invoicing
 </th>
-
 <th rowspan="14" style="text-align: left;">
-
 This category covers all billing and Invoicing-related interactions, such as viewing invoices, troubleshooting billing problems, etc.
 </th>
-
 <th style="text-align: left;">
-
 General description of the Billing service
 </th>
-
 <th style="text-align: left;">
-
 Incorrect invoice
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Modes of calculation provided by the Billing engine
 </th>
-
 <th style="text-align: left;">
-
 Debit not issued
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Reference currency of the Billing engine
 </th>
-
 <th style="text-align: left;">
-
 Double chargeback
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Detailed cost analysis of individual services
 </th>
-
 <th style="text-align: left;">
-
 Errors in individual service charges in billing data
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Viewing of invoices
 </th>
-
 <th style="text-align: left;">
-
 Inability to view invoices
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Download copy of invoices
 </th>
-
 <th style="text-align: left;">
-
 Difficulty downloading a copy of invoices
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Payment methods that are accepted for billing
 </th>
-
 <th style="text-align: left;">
-
 Problems encountered when adding a payment method
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Adding new payment method
 </th>
-
 <th style="text-align: left;">
-
 Inability to set a default payment method
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Setting default payment method
 </th>
-
 <th style="text-align: left;">
-
 Difficulty viewing transaction history
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Viewing transaction history
 </th>
-
 <th style="text-align: left;">
-
 Problems encountered with a specific transaction
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Refund requests
 </th>
-
 <th style="text-align: left;">
-
 Inability to request a refund
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 How to contact support for billing issues
 </th>
-
 <th style="text-align: left;">
-
 Errors found in billing information
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 How to update billing information
 </th>
-
 <th style="text-align: left;">
-
 Difficulty updating billing information
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 How to make or unsubscribe from recurring billing
 </th>
-
 <th style="text-align: left;">
-
 Problems encountered with recurring billing
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="8" style="text-align: left;">
-
 Product management (buyer & seller)
 </th>
-
 <th rowspan="8" style="text-align: left;">
-
 This category covers all interactions related to the publication of a product or service on the portal.
 </th>
-
 <th style="text-align: left;">
-
 Publication of a new product on the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems when publishing a new product
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Requirements for publishing a product
 </th>
-
 <th style="text-align: left;">
-
 Errors when setting the price
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Setting the price for a product
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in adding images or descriptions
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Adding images or descriptions to the product
 </th>
-
 <th style="text-align: left;">
-
 Problems in tracking product sales
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Tracking sales of the product
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in promoting the product
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Promoting the product on the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems updating product information
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Updating product information
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in removing a product from the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Removing a product from the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems with product visibility on the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="8" style="text-align: left;">
-
 Account management (buyer & seller)
 </th>
-
 <th rowspan="8" style="text-align: left;">
-
 This category covers all interactions related to account management, such as registration, logging in, editing account details, deleting, etc.
 </th>
-
 <th style="text-align: left;">
-
 Account creation
 </th>
-
 <th style="text-align: left;">
-
 Problems accessing the account
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Password recovery
 </th>
-
 <th style="text-align: left;">
-
 Failure to receive verification email
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Updating account information
 </th>
-
 <th style="text-align: left;">
-
 Difficulty changing password
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Adding a payment method to the account
 </th>
-
 <th style="text-align: left;">
-
 Problems adding a payment method
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Changing the password
 </th>
-
 <th style="text-align: left;">
-
 Errors when updating account information
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Setting up notifications for the account
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in setting up notifications
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Closing the account
 </th>
-
 <th style="text-align: left;">
-
 Problems in closing the account
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Verifying the email address or phone number
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in verifying the email address or phone number
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="10" style="text-align: left;">
-
 Privacy & Compliance
 </th>
-
 <th rowspan="10" style="text-align: left;">
-
 This category covers all privacy and compliance-related interactions, such as privacy policy inquiries, reports of compliance issues, etc.
 </th>
-
 <th style="text-align: left;">
-
 Portal privacy policy
 </th>
-
 <th style="text-align: left;">
-
 Difficulty finding the privacy policy
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Procedure for removing personal information from the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems in requesting removal of personal information
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Reporting a privacy breach
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in reporting a privacy violation
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Security measures taken by the portal to protect user data
 </th>
-
 <th style="text-align: left;">
-
 Problems in accessing personal data on the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Access to personal data stored on the portal
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in requesting correction of personal data
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Privacy laws and compliance followed by the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems in filing a privacy-related complaint
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Request for correction of personal data
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in restricting the use of personal data
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Filing a privacy-related complaint
 </th>
-
 <th style="text-align: left;">
-
 Lack of notification of privacy policy changes
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Limitation of the use of personal data
 </th>
-
 <th style="text-align: left;">
-
 Problems with account privacy settings
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Notification of changes to the privacy policy
 </th>
-
 <th style="text-align: left;">
-
 Concerns about data security on the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="8" style="text-align: left;">
-
 Catalog
 </th>
-
 <th rowspan="8" style="text-align: left;">
-
 This category covers all interactions related to searching for products or services in the portal catalog, the correct labels of a service in the catalog categories, etc.
 </th>
-
 <th style="text-align: left;">
-
 Searching for a specific product or service in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Problems searching the catalog
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Filtering of search results in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Difficulty filtering search results
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Sorting of search results in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Problems sorting search results
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Viewing the details of a product in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Difficulty viewing the details of a product
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Comparing different products in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Problems in comparing different products
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Viewing reviews of a product in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Difficulty viewing reviews of a product
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Viewing products similar to the one searched for
 </th>
-
 <th style="text-align: left;">
-
 Problems viewing similar products
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Requesting additional information about a product in the catalog
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in requesting additional information about a product
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="7" style="text-align: left;">
-
 Web portal
 </th>
-
 <th rowspan="7" style="text-align: left;">
-
 This category covers general inquiries about the portal, such as its features, services offered, etc.
 </th>
-
 <th style="text-align: left;">
-
 Services available on the portal
 </th>
-
 <th style="text-align: left;">
-
 Portal access problems
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Requirements for becoming a vendor
 </th>
-
 <th style="text-align: left;">
-
 Problems loading the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Key portal features
 </th>
-
 <th style="text-align: left;">
-
 Difficulty editing preferences
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Contact with customer support
 </th>
-
 <th style="text-align: left;">
-
 Problems with email notifications from the portal
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Portal policies regarding returns and refunds
 </th>
-
 <th style="text-align: left;">
-
 Problems with API integration
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Availability of API integrations
 </th>
-
 <th style="text-align: left;">
-
 Difficulty in displaying portal content correctly (also UI/UX issues)
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Availability of a mobile app
 </th>
-
 <th style="text-align: left;">
-
 Problems with the portal mobile app
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="6" style="text-align: left;">
-
 Infrastructure
 </th>
-
 <th rowspan="6" style="text-align: left;">
-
 This category covers all interactions related to portal infrastructure, such as infrastructure inquiries, reports of infrastructure problems, etc.
 </th>
-
 <th style="text-align: left;">
-
 Portal infrastructure specifications
 </th>
-
 <th style="text-align: left;">
-
 Problems accessing the portal infrastructure
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Maintenance of the portal infrastructure
 </th>
-
 <th style="text-align: left;">
-
 Errors during the use of the infrastructure
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Infrastructure security measures
 </th>
-
 <th style="text-align: left;">
-
 Difficulties during the maintenance of the infrastructure
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Reporting a problem with the infrastructure
 </th>
-
 <th style="text-align: left;">
-
 Security problems with the infrastructure
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Data backup and recovery policies
 </th>
-
 <th style="text-align: left;">
-
 Difficulties with data backup and recovery
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Information on infrastructure scalability
 </th>
-
 <th style="text-align: left;">
-
 Problems with the scalability of the infrastructure
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="10" style="text-align: left;">
-
 API integration
 </th>
-
 <th rowspan="10" style="text-align: left;">
-
 This category covers all interactions related to API integration, such as configuration, integration troubleshooting, etc.
 </th>
-
 <th style="text-align: left;">
-
 Integration of the web portal with a system
 </th>
-
 <th style="text-align: left;">
-
 Problems accessing the portal API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Access to the portal API
 </th>
-
 <th style="text-align: left;">
-
 Errors with the portal API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Limitations of the portal API
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in obtaining an API key
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Obtaining an API key
 </th>
-
 <th style="text-align: left;">
-
 Security problems with the API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Features available through the API
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in monitoring the use of the API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Testing of the portal API
 </th>
-
 <th style="text-align: left;">
-
 Problems with testing the portal API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Security requirements for using the API
 </th>
-
 <th style="text-align: left;">
-
 Difficulties with the limitations of the portal API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Monitoring the use of the API
 </th>
-
 <th style="text-align: left;">
-
 Problems in reporting a problem with the API
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Reporting a problem with the API
 </th>
-
 <th style="text-align: left;">
-
 Problems with web portal integration
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Best practices for using the portal API.
 </th>
-
 <th style="text-align: left;">
-
 Need for assistance with best practices for using the API
 </th>
-
 </tr>
-
 <tr>
-
 <th rowspan="10" style="text-align: left;">
-
 Third-party application management (provisioning/deprovisioning)
 </th>
-
 <th rowspan="10" style="text-align: left;">
-
 This category covers all interactions related to the management of third-party applications (for example other cloud ecommerce that permorf federation of their services on the DOME portal), such as installation, uninstallation, configuration, deleting, etc.
 </th>
-
 <th style="text-align: left;">
-
 Adding a third-party application to the account
 </th>
-
 <th style="text-align: left;">
-
 Problems in adding a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Removing a third-party application from the account
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in removing a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Third-party applications supported by the portal
 </th>
-
 <th style="text-align: left;">
-
 Problems in configuring a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Configuring a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in managing permissions for a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Managing permissions for a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Problems connecting a third-party application to the account
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Connecting a third-party application to the account
 </th>
-
 <th style="text-align: left;">
-
 Problems with compatibility with a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Troubleshooting compatibility issues with a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in obtaining support for a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Obtaining support for a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Problems in updating a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Updating a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Difficulties in monitoring the usage of a third-party application
 </th>
-
 </tr>
-
 <tr>
-
 <th style="text-align: left;">
-
 Monitoring the usage of a third-party application
 </th>
-
 <th style="text-align: left;">
-
 Problems with integrating a third-party application
 </th>
-
 </tr>
-
 </thead>
-
 <tbody>
-
 </tbody>
-
 </table>
 
 ## 5.8 DOME User Experience (UX) design
