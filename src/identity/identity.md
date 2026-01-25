@@ -1,4 +1,4 @@
-# Relationship with the EUDI Wallet ecosystem
+# 1. Relationship with the EUDI Wallet ecosystem
 
 The DOME Identity and Access Management system is aligned with the eIDAS2 Regulation and the EUDI Wallet ecosystem. To describe the meaning of the word 'alignment' in this context, we reproduce here the picture in the [EUDIW Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md):
 
@@ -8,7 +8,53 @@ The whole ecosystem is still not in place (although we expect the second half of
 
 ![DOME-EUDI_Wallet_simple.png](images/DOME-EUDI_Wallet_simple.png)
 
-# 3 DOME Trust and IAM Framework
+The following considerations apply.
+
+## 1.1. The Wallet
+There are still not fully compliant EUDI Wallets in the market, but DOME has an implementation of it with the subset of functionalities required for DOME. To be more precise, the DOME Wallet is an early implementation of the EU Business Wallet as described in the [Proposal for a Regulation on the establishment of European Business Wallets (November 2025)](https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-establishment-european-business-wallets). It is important tonote that the DOME Wallet does not manage Person Identification Data (PID), but instead uses non-qualified attestations (EAAs) representing domain-specific electronic mandates.
+
+The DOME Wallet receives credentials from Issuers using the [OpenID for Verifiable Credential Issuance 1.0 (OID4VCI)](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) and presents attestations using [OpenID for Verifiable Presentations 1.0 (OID4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html). It implements a proper subset of the functionalities, for example, it uses online flows and it does not support proximity flows.
+
+The DOME Wallet is not intented for citizens, but focuses on the business environment. It is intended for employees and other natural persons acting on behalf of organisations.
+
+Actually, there are two implementation of the Wallet done by independent organizations, and soon there will be more. However, the Wallet most used in practice and best supported is the one at [https://wallet.dome-marketplace.eu](https://wallet.dome-marketplace.eu). This Wallet is operated by DOME, until there are fully compliant EUDI Wallets and Business Wallets.
+
+## 1.2. The Issuer and EEA Provider
+In the context of DOME we use the term Issuer to refer to the software and the entity which issues the type of Electronic Attestations of Attribute (EAA) that employees have to present to interact with DOME.
+
+DOME has an implementation of an Issuer, which uses OID4VCI to issue EAAs to Wallets and organizations.
+
+The DOME Issuer generates credentials to an organisation automatically after the organisation has performed the Onboarding process in DOME.
+
+DOME can accept credentials issued by any other Issuer operated by any other independent organisation, as long as it complies with some basic requirements:
+- The assurance level of the verification of the identity of the organisation and its legal representative is compatible with the level required in DOME.
+- The attestation issued complies with the format (ontology) used in DOME.
+- The Issuer is registered in the Trusted Issuer List operated by DOME, or in any other recognised Trusted List (in the future, the eIDAS2 Trusted Lists).
+
+Please note that at the moment, given the business requirements of DOME, we accept EAAs and QEAAs are not required. However, DOME will accept QEAAs when they are available (probably 2H26 or 1H27).
+
+## 1.3. The Trusted Lists
+DOME uses a combination of Trusted Lists:
+- The [List of qualified trust service providers in the EU](https://digital-strategy.ec.europa.eu/en/policies/eu-trusted-lists) for the verification of digital signatures.
+- The lists implemented and operated by DOME in its [Trust Framework](https://github.com/DOME-Marketplace/dome-trust-registry/tree/main).
+
+The DOME Trust Framework contains:
+- **Trusted Participants Registry.** The identities of organisations which are participants in the DOME instance
+- **Trusted Issuers Registry.** The identities of organizations which DOME recognises as Issuers of the credentials used in DOME
+- **Trusted Access Node Registry.** The identities of Access Nodes operated by independent organisations which can interact with DOME
+- **Trusted Services Registry.** The identities of machines/workloads which can interact directly with the DOME APIs
+- **Trusted Schemas Registry.** The credential schemas used in DOME
+
+In addition, DOME operates the **Revoked Credential List** and the **Invalid Credentials List**.
+
+The DOME Trusted Lists APIs are aligned with the ones in EBSI, in what we call the [EBSI-like Trusted Registry API](https://github.com/DOME-Marketplace/dome-trust-registry/blob/main/docs/openapi.yaml). In any case, we will evolve it to whatever final implementation is in eIDAS2 for these types of trusted lists. We already have in place the mechanisms to make the evolution transparent to applications.
+
+## 1.4. The Relying Party: the DOME Marketplace and other applications
+In DOME, applications use OpenID Connect Core for authentication. We have a component called the **VCVerifier** which handles the complexity of interactions with the Wallet, on behalf of the applications. A summary picture follows, but the details will be described later. 
+
+![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
+
+# 2. DOME Trust and IAM Framework
 
 DOME uses **electronic mandates for authentication of employees acting on behalf of organizations**. These electronic mandates are represented in machine-readable format compatible with the EUDI Wallet (and the future Business Wallet) to facilitate automated processing and verification, and eliminate the slow, cumbersome and error-prone manual processes associated with traditional paper-based mandates. 
 
@@ -21,13 +67,13 @@ In terms of eIDAS2, DOME accepts non-qualified EEAs (Electronic Attestation of A
 
 DOME has extended the concept of eMandate for an employee to **machines and workloads**: organizations (or trusted entities) can issue EEAs to machines/workloads controled by the organization, providing a very powerful machine-to-machine authentication and access control mechanism. We will focus initially of the eMandate for employees, and later will describe its usage with machines and workloads.
 
-## 3.1 The electronic mandate (eMandate)
+## 2.1. The electronic mandate (eMandate)
 
 An electronic mandate (eMandate) is a digital representation of a legal authorization given by one entity (the mandator) to another (the mandatee) to perform specific actions or represent them in certain contexts. In the DOME platform, eMandates are crucial for enabling employees to act on behalf of their organizations.
 
 A good way to understand the specific usage of eMandates in DOME is to describe a non-DOME well-know example and show how it is transposed to DOME.
 
-### 3.1.1 An example of a mandate
+### 2.1.1. An example of a mandate
 
 To participate in the [EU Funding & Tenders Portal](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home), organizations must appoint a **LEAR**.
 The LEAR (Legal Entity Appointed Representative) is a person, usually an administrative staff member in the central administration, appointed by the legal representative of the organisation (CEO, rector, Director-General, etc.). His/her tasks are to manage the legal and financial information of the organisation in the Participant Register on the Funding & Tenders Portal and to provide and update the list of persons in his/her organisation who are authorised to sign grant agreements (LSIGN) or financial statements (FSIGN).
@@ -56,7 +102,7 @@ Finally, the next figure focuses on the formal description on the powers that th
 
 ![Delegated Powers](lear_power.png)
 
-### 3.1.2 The mandate in DOME
+### 2.1.2. The mandate in DOME
 
 The above can be generalized to map the different sections of the LEAR Appointment Letter to the DOME eMandate, as shown in the following figure. This mapping ensures that all relevant information from the traditional mandate is accurately translated into its digital equivalent, facilitating automated processing and verification within the DOME platform.
 
@@ -66,7 +112,7 @@ You can see that the eMandate has an object called `mandate`, which contains the
 
 We will talk now about the properties of the signature. But first, let's talk about the Trust Framework that we use in DOME
 
-## 3.2 The Chain of Trust
+## 2.2. The Chain of Trust
 
 The DOME Trust Framework relies upon the principles of eIDAS (electronic IDentification, Authentication and trust Services) Regulation, which provides a legal framework for electronic identification and trust services across the European Union. This framework ensures a high level of security, interoperability, and legal certainty for electronic transactions.
 
@@ -74,13 +120,13 @@ An overview of the chain of trust used in DOME is shown in the following figure.
 
 ![](chain_of_trust.drawio.svg)
 
-### 3.2.1 The Trusted Root: EU Trusted Lists
+### 2.2.1. The Trusted Root: EU Trusted Lists
 
 According to the eIDAS Regulation, EU countries have the obligation to establish, maintain and publish trusted lists of qualified trust service providers (QTSPs) and the services provided by them. The services provided by a QTSP **is qualified only if it appears in a trusted list**.
 
 There are different trust services that can be provided by the QTSPs, but the ones relevant for DOME are the issuance of qualified certificates for electronic signatures and seals.
 
-In DOME we do not have any CA (Certification Authority) in our ecosystem, and we do not issue any type of X.509 certificate. We rely on the eIDAS certificates issued by the QTSPs, so our trusted roots are the ones in the eIDAS trusted lists (https://digital-strategy.ec.europa.eu/en/policies/eu-trusted-lists).
+In DOME we do not have any CA (Certification Authority) in our ecosystem, and we do not issue any type of X.509 certificate. We rely on the eIDAS certificates issued by the QTSPs, so our trusted roots are the ones in the [eIDAS trusted lists](https://digital-strategy.ec.europa.eu/en/policies/eu-trusted-lists).
 
 There are many QTSPs in the EU, where any organization can obtain a certificate from any QTSP in any EU country issuing certificates for signatures/seals. Organizations are not limited to QTSPs in its country: many QTSPs provide remote identification services for legal representatives of organizations in other countries.
 
@@ -88,7 +134,7 @@ There are many QTSPs in the EU, where any organization can obtain a certificate 
 
 In DOME we trust on any QTSP which is included in the EU Trusted Lists.
 
-### 3.2.2 The QTSP and Authentic Sources
+### 2.2.2. The QTSP and Authentic Sources
 
 ![](qtsp_authentic_sources.drawio.svg)
 
@@ -103,7 +149,7 @@ This is a key property of the mechanism used in DOME: if a person presents a qua
 
 In a pan-european context, those are cumbersome and lengthy processes if we only use "traditional" paper/PDF documents.
 
-### 3.2.3 Issuance of the mandate by the organization
+### 2.2.3. Issuance of the mandate by the organization
 
 ![](issuance_of_mandate.drawio.svg)
 
@@ -120,7 +166,7 @@ The legal certainty (in case there is litigation) is actually higher than if we 
 
 The world, however, is very complex and some organizations are not ready to issue themselves the eMandate. We will se in another part of this document how DOME provides alternative procedures to overcome these limitations, which are supposedly temporal until eIDAS2 is fully implemented and adopted in the EU.
 
-### 3.2.4 Authentication of the employee in DOME
+### 2.2.4. Authentication of the employee in DOME
 
 ![](authentication_of_employee.drawio.svg)
 
@@ -132,7 +178,7 @@ This Business Wallet is fully aligned with the eIDAS2 specifications, but we do 
 
 We will talk more about the Business Wallet in another part of this document, but for now suffice to say that we have defined a "DOME profile" with the minimum requirements that Business Wallets have to comply in order to be able to be used in DOME.
 
-### 3.2.5 Summary: Key characteristics of eMandates in DOME:
+### 2.2.5. Summary: Key characteristics of eMandates in DOME:
 
 - **Digital Representation:** eMandates are entirely digital, eliminating the need for physical documents and streamlining processes.
 - **Legal Authorization:** They carry legal weight, ensuring that actions performed by the mandatee on behalf of the mandator are legally binding.
@@ -153,7 +199,7 @@ We will talk more about the Business Wallet in another part of this document, bu
 - **Future-Proof:** Built on open standards and evolving digital identity frameworks, ensuring long-term relevance and adaptability.
 - **Streamlined Onboarding:** Facilitates quicker and more efficient onboarding of new employees and partners by digitizing the authorization process.
 
-## 3.3 The LEARCredential
+## 2.3. The LEARCredential
 
 The `LEARCredential` is a machine-readable legal document representing an electronic mandate (known also as Company Authorization Letter). In this context, the term `mandate` is used to describe the concept of **delegating specific permissions and powers to an employee of an organisation, enabling that employee to act on behalf of the company in a specific set of matters or tasks**.
 
@@ -177,12 +223,12 @@ The data model of the LEARCredential is based in the [RPaM-Ontology](https://git
 
 We adapt the results of that project, with simplifications and specialisations, to the concrete environment where we use the LEARCredential. To facilitate the job of the reader of this document, in some sections we copy literal sentences from the RPaM Ontology project, and adapt the texts to our requirements. However, the reader is encouraged to access the original documents for more details and understand the original approach, including the [RPaM Ontology Glossary](https://everis-rpam.github.io/Glossary.html).
 
-### 3.3.1 The Mandate
+### 2.3.1. The Mandate
 According to the RPaM Glossary, a "mandate is a record that describes the terms under which a mandator grants a representation power to a mandatee".
 
 In DOME, the mandate is composed of three related objects: `mandator`, `mandatee`, `power` and `signer`. The mandate object is signed or sealed with an advanced or qualified signature or seal using an eIDAS certificate.
 
-#### 3.3.1.1 Mandator
+#### 2.3.1.1. Mandator
 
 The object mandator identifies the employee of the company who is delegating a subset of her powers on the mandatee.
 
@@ -192,7 +238,7 @@ The mandator is either:
 
 - an employee who is a mandatee in another mandate where the mandator is a legal representative of the company. We do not support more than two levels of delegation.
 
-#### 3.3.1.2 Mandatee
+#### 2.3.1.2. Mandatee
 
 The mandatee is the person granted with the power to represent (and act as) the company in some specific actions with third-parties. The powers granted to the mandatee must be a subset of the powers of the mandator. For example, an employee (the mandatee) can be empowered by the legal representative of the company (the mandator) to perform the onboarding process in DOME.
 
@@ -207,13 +253,13 @@ The private key controlled by the employee is used to prove to Relying parties r
 - Using a did:key where the employee controls the private key associated to the did:key.
 - Using an eIDAS certificate owned by the employee. This is very rare today (end of 2024), but will become more common when eIDAS2 and the EUDI Wallet is adopted.
 
-#### 3.3.1.3 Signer
+#### 2.3.1.3. Signer
 
 The Signer is either the Mandator or a third-party that attests that the Mandator really delegated the powers to the Mandatee. The Signer is the entity that performs an advanced or qualified signature or seal using an eIDAS certificate.
 
 The Signer is the entity that has to be trusted by the receiver of the LEARCredential.
 
-#### 3.3.1.4 Power
+#### 2.3.1.4. Power
 
 This object is a list of each specific power that is delegated from the mandator to the mandatee. The powers must be concrete and as constrained as possible, and must follow a taxonomy with the semantics well specified.
 
@@ -276,7 +322,7 @@ The `power` object is an array where each element is a power that is delegated f
   - `Execute` when `function` is `Onboarding`.
   - Any combination of `Create`, `Update` and `Delete` when `function` is `ProductOffering`.
 
-## 3.4 Authentication with the LEARCredential
+## 2.4. Authentication with the LEARCredential
 
 Authentication in DOME with the LEARCredential can be performed both for Human-to-Machine (H2M) and Machine-to-Machine (M2M) use cases.
 
@@ -292,7 +338,7 @@ There are two types of entities that can authenticate to DOME services:
 
 We first explain the H2M flow: how your application can authenticate employees of companies (including your own company, of course). Later we describe the M2M flow.
 
-### 3.4.1 Human-to-Machine (H2M) authentication flow
+### 2.4.1. Human-to-Machine (H2M) authentication flow
 
 ![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
 
@@ -308,7 +354,7 @@ If the application only requires standard claims like first-name, last_name or e
 
 However, if the application requires the whole set of information in the Verifiable Credential, it has to support the non-standard claims and extract the information from the Verifiable Credential.
 
-#### 3.4.1.1 Parameters of the VCVerifier
+#### 2.4.1.1. Parameters of the VCVerifier
 
 You have to tell your Application some things before it can talk to the VCVerifier.
 
@@ -322,7 +368,7 @@ Your Application must use the following endpoints of the VCVerifier during the f
 
 https://verifier.dome-marketplace.eu/oidc/authorize?state=6cf8b5dd-3fc9-4d6b-bc64-722badb5a419&client_id=did:key:zDnaeTU39Wx9KXgmEwmfXsZSyEVxgCqwCVmoPyVQUTD8bhW8a&response_type=code&request_uri=https://dome-marketplace.eu/auth/vc/request.jwt&scope=openid learcredential&nonce=56a091bb-ad1e-47f0-bc8b-7dfe99a6bae4
 
-#### 3.4.1.2 Starting the Authentication Request
+#### 2.4.1.2. Starting the Authentication Request
 
 Before any authentication can take place, your Application has to be registered with the VCVerifier. This is done during the onboarding process in DOME, or at any time later, contacting the onboarding team.
 
@@ -355,7 +401,7 @@ Note the following:
 
 - **state** is used by your Application to match this request with the future reply, in order to support multiple users at the same time.
 
-#### 3.4.1.3 Receiving the Verifiable Credential in your Application
+#### 2.4.1.3. Receiving the Verifiable Credential in your Application
 
 After the execution of the Authorization Code Flow, your Application can receive the Verifiable Credential in two ways:
 
@@ -365,7 +411,7 @@ After the execution of the Authorization Code Flow, your Application can receive
 
 The contents of the LEARCredential can be used by the Application to perform not only authentication but also authorization (access control). For example, using the Powers of the User which are included in the LEARCredential.
 
-### 3.4.2 Machine-to-Machine (M2M) authentication flow
+### 2.4.2. Machine-to-Machine (M2M) authentication flow
 
 ![A server authenticating with Verifiable Credentials](DOMEAuthentication-M2M-flow-overview.drawio.png)
 
@@ -375,7 +421,7 @@ The credential used by the Application for authenticating to the VCVerifier is t
 
 The M2M flow uses the **Client Credentials Grant**, following the [OAuth 2.1 IETF draft (12 July 2024)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10), which among other things takes into account the [OAuth 2.0 Security Best Current Practice](https://oauth.net/2/oauth-best-practice/) and consolidates several new RFCs that are relevant for our use case.
 
-#### 3.4.2.1 Authenticating and receiving an Access Code
+#### 2.4.2.1. Authenticating and receiving an Access Code
 
 The M2M flow uses a Token Endpoint specifically for M2M:
 
