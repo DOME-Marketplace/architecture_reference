@@ -2,9 +2,8 @@
 
 The DOME Identity and Access Management system is aligned with the eIDAS2 Regulation and the EUDI Wallet ecosystem. To describe the meaning of the word 'alignment' in this context, we reproduce here the picture in the [EUDIW Architecture and Reference Framework](https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/blob/main/docs/architecture-and-reference-framework-main.md):
 
-![EUDI Wallet ecosystem](images/Figure_1_Overview_of_EUDI_Wallet_roles.png)
+![](images/Figure_1_Overview_of_EUDI_Wallet_roles.png)
 
-<br/>
 The whole ecosystem is still not in place (although we expect the second half of 2026 to be very active), but in reality it is an extension of the existing eIDAS Regulation, with a decade of experience and a well-defined legal framework.
 
 The eIDAS regulation recognises the following types of trust service providers:
@@ -27,9 +26,8 @@ In DOME we have in production since summer 2024 a system fully compliant with eI
 
 This is a simplified picture to facilitate the description of how the DOME components fit in the EUDI Wallet architecture.
 
-![DOME and the EUDI Wallet ecosystem](images/DOME-EUDI_Wallet_simple.png)
+![](images/DOME-EUDI_Wallet_simple.png)
 
-<br/>
 The following considerations apply.
 
 ## 1.1. The Wallet
@@ -74,7 +72,7 @@ The DOME Trusted Lists APIs are aligned with the ones in EBSI, in what we call t
 ## 1.4. The Relying Party: the DOME Marketplace and other applications
 In DOME, applications use OpenID Connect Core for authentication. We have a component called the **VCVerifier** which handles the complexity of interactions with the Wallet, on behalf of the applications. A summary picture follows, but the details will be described later. 
 
-![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
+![](authentication.h2m-overview.drawio.svg)
 
 # 2. DOME Trust and IAM Framework
 
@@ -102,7 +100,7 @@ The LEAR (Legal Entity Appointed Representative) is a person, usually an adminis
 
 This appointment is formalized with the LEAR Appointment Letter, which is effectively a mandate. An overview of the LEAR Appointment Letter is shown in the following figure.
 
-![LEAR Appointment Letter](lear_letter_all.drawio.png)
+![](lear_letter_all.drawio.png)
 
 There are four sections of interest in that Letter:
 1. the identification of the organization and the legal representative;
@@ -114,15 +112,15 @@ The first three sections correspond to the figures of Mandator (Legal Representa
 
 The following figure focuses on the identification of the organization and the legal representative, and provides an example representation in JSON format.
 
-![Identification of Organisation and Legal Representative](lear_representative.png)
+![](lear_representative.png)
 
 The next figure focuses on the identification of the employee who will be appointed as LEAR, and an example representation in JSON.
 
-![Identification of Employee](lear_employee.png)
+![](lear_employee.png)
 
 Finally, the next figure focuses on the formal description on the powers that the LEAR must have, and an example representation in JSON format.
 
-![Delegated Powers](lear_power.png)
+![](lear_power.png)
 
 ### 2.1.2. The mandate in DOME
 
@@ -130,7 +128,7 @@ The above can be generalized to map the different sections of the LEAR Appointme
 
 You can see that the eMandate has an object called `mandate`, which contains the `mandator`, `mandatee`, and `power` objects, mirroring the structure of the LEAR Appointment Letter. You can also see that we use an eIDAS signature to sign the eMandate. This signature not only ensures its authenticity and integrity, but it also provides linkage to the real-world identity of the organization that appointed the LEAR, providing a proper level of legal certainty that other types of signatures can not provide.
 
-![Mapping of the LEAR Appointment Letter to a DOME eMandate](mapping_mandate.png)
+!](mapping_mandate.png)
 
 We will talk now about the properties of the signature. But first, let's talk about the Trust Framework that we use in DOME
 
@@ -239,7 +237,7 @@ The LEARCredential (**L**egal **E**ntity **A**uthorised **R**epresentative **Cre
 
 The figure below describes a high-level view of the LEARCredential.
 
-![Composition of a LEARCredential](learcredential-overview.png)
+![](learcredential-overview.png)
 
 The data model of the LEARCredential is based in the [RPaM-Ontology](https://github.com/everis-rpam/RPaM-Ontology/wiki/Ontology-Development-Report), which is a project started in 2018 by the Directorate-General for Informatics (DG-DIGIT) of the European Commission, funded by the ISA Programme, to organise and support the development of an ontology about the **Representation of Powers and Mandates**, from now on the RPaM Ontology.
 
@@ -362,7 +360,7 @@ We first explain the H2M flow: how your application can authenticate employees o
 
 ### 2.4.1. Human-to-Machine (H2M) authentication flow
 
-![Application authenticating with Verifiable Credentials](authentication.h2m-overview.drawio.svg)
+![](authentication.h2m-overview.drawio.svg)
 
 DOME provides a component called the [VCVerifier](https://github.com/DOME-Marketplace/dome-altia-verifier-aio) which makes very easy for applications to integrate authentication with Verifiable Credentials. The VCVerifier component hides the complexity of the [OpenID for Verifiable Presentations (OID4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) protocol required to talk to the Wallet.
 
@@ -435,7 +433,7 @@ The contents of the LEARCredential can be used by the Application to perform not
 
 ### 2.4.2. Machine-to-Machine (M2M) authentication flow
 
-![A server authenticating with Verifiable Credentials](DOMEAuthentication-M2M-flow-overview.drawio.png)
+![](DOMEAuthentication-M2M-flow-overview.drawio.png)
 
 The VCVerifier component of DOME support also the M2M flows. The figure above shows a server application using the VCVerifier to exchange a Verifiable Credential for an Access Token, and then using the token to access protected resources. The M2M (machine-to-machine) flow for authentication is simpler than the one for H2M, because there is no user authentication involved.
 
