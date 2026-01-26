@@ -7,6 +7,7 @@ The DOME Identity and Access Management system is aligned with the eIDAS2 Regula
 <figcaption aria-hidden="true">EUDI Wallet ecosystem</figcaption>
 </figure>
 
+<br/>
 The whole ecosystem is still not in place (although we expect the second half of 2026 to be very active), but in reality it is an extension of the existing eIDAS Regulation, with a decade of experience and a well-defined legal framework.
 
 The eIDAS regulation recognises the following types of trust service providers:
@@ -30,10 +31,11 @@ In DOME we have in production since summer 2024 a system fully compliant with eI
 This is a simplified picture to facilitate the description of how the DOME components fit in the EUDI Wallet architecture.
 
 <figure>
-<img src="images/DOME-EUDI_Wallet_simple.png" alt="DOME-EUDI_Wallet_simple.png" />
-<figcaption aria-hidden="true">DOME-EUDI_Wallet_simple.png</figcaption>
+<img src="images/DOME-EUDI_Wallet_simple.png" alt="DOME and the EUDI Wallet ecosystem" />
+<figcaption aria-hidden="true">DOME and the EUDI Wallet ecosystem</figcaption>
 </figure>
 
+<br/>
 The following considerations apply.
 
 ## 1.1. The Wallet
