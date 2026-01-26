@@ -186,6 +186,8 @@ The legal certainty (in case there is litigation) is actually higher than if we 
 
 The world, however, is not homogeneous and some organizations are not ready to issue themselves the eMandate. We will see in another part of this document how DOME provides alternative procedures to overcome these limitations, which are supposedly temporal until eIDAS2 is fully implemented and adopted in the EU.
 
+![trusted_issuer.png](./trusted_issuer.png)
+
 ### 2.2.4. Authentication of the employee in DOME
 
 ![](authentication_of_employee.drawio.svg)
@@ -199,6 +201,8 @@ This Business Wallet is fully aligned with the eIDAS2 specifications, but we do 
 We will talk more about the Business Wallet in another part of this document, but for now suffice to say that we have defined a "DOME profile" with the minimum requirements that Business Wallets have to comply in order to be able to be used in DOME.
 
 ### 2.2.5. Summary: Key characteristics of eMandates in DOME:
+
+![overall_view_identity_components.png](./overall_view_identity_components.png)
 
 - **Digital Representation:** eMandates are entirely digital, eliminating the need for physical documents and streamlining processes.
 - **Legal Authorization:** They carry legal weight, ensuring that actions performed by the mandatee on behalf of the mandator are legally binding.
