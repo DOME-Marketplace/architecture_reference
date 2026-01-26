@@ -4,7 +4,27 @@ The DOME Identity and Access Management system is aligned with the eIDAS2 Regula
 
 ![EUDI Wallet ecosystem](images/Figure_1_Overview_of_EUDI_Wallet_roles.png)
 
-The whole ecosystem is still not in place (although we expect the second half of 2026 to be very active), but this is a simplified picture to facilitate the description of how the DOME components fit in the EUDI Wallet architecture.
+The whole ecosystem is still not in place (although we expect the second half of 2026 to be very active), but in reality it is an extension of the existing eIDAS Regulation, with a decade of experience and a well-defined legal framework.
+
+The eIDAS regulation recognises the following types of trust service providers:
+
+- **QCert for Esig/ESeal**: certification authorities issuing certificates for digital signatures supporting electronic signatures and seals;
+- **QTimestamp**: time-stamping authorities providing proof of existence of a data object (including signed documents) at a given time;
+- **QWAC**: certification authorities issuing certificates to support website authentication, aligned with the requirements of the CA/Browser Forum as recognised by all the major Web Browser Vendors;
+- **QVal for QEsig/QESeal and QPres for QEsig/QESeal**: Providers of services for the validation and preservation of signed data;
+- **QeRDS**: Providers of services for registered electronic delivery including registered electronic mail.
+
+This has been extended in eIDAS2 with the definition of the EU Digital Identity Wallet and additional trust service providers:
+
+- **PID**, **QEAA** and **Pub-EAA Provider**: Electronic Attestation of Attributes relating attributes and credentials to identified persons. These have the highest level of legal assurance, and are recognized across all EU member states.
+- **EAA Provider**: The basic version, issued by any Trust Service Provider (TSP). While not meeting the highest "qualified" standards, it is enough for DOME. The signed PDF equivalent today is the one used in most electronic transactions (B2B, B2C, C2G, B2G, ...).
+- Creation of electronic signatures and seals using remote signing devices held in the cloud, as opposed to, for example, locally held smart card;
+- **QeA**: Electronic Archiving services for the long-term preservation of electronic data, ensuring its durability and legibility over time
+- **Qualified Electronic Ledgers**: service for recording electronic data in a way that ensures the integrity and accuracy of the data's chronological order.
+
+In DOME we have in production since summer 2024 a system fully compliant with eIDAS1 but using a subset of the technology of eIDAS2, which provides many efficiency and security advantages. The system is aligned with eIDAS2 and allows for a smooth migration as the EUDI Wallet ecosystem evolves and matures, with minimal or no impact on the applications.
+
+This is a simplified picture to facilitate the description of how the DOME components fit in the EUDI Wallet architecture.
 
 ![DOME-EUDI_Wallet_simple.png](images/DOME-EUDI_Wallet_simple.png)
 
