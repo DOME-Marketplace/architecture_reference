@@ -132,7 +132,7 @@ The above can be generalized to map the different sections of the LEAR Appointme
 
 You can see that the eMandate has an object called `mandate`, which contains the `mandator`, `mandatee`, and `power` objects, mirroring the structure of the LEAR Appointment Letter. You can also see that we use an eIDAS signature to sign the eMandate. This signature not only ensures its authenticity and integrity, but it also provides linkage to the real-world identity of the organization that appointed the LEAR, providing a proper level of legal certainty that other types of signatures can not provide.
 
-!\](mapping_mandate.png)
+![](mapping_mandate.png)
 
 We will talk now about the properties of the signature. But first, let’s talk about the Trust Framework that we use in DOME
 
@@ -192,10 +192,7 @@ The world, however, is not homogeneous and some organizations are not ready to i
 
 The LEARCredential is digitally signed by a QTSP using cloud signature with a qualified certificate.
 
-<figure>
-<img src="./trusted_issuer.png" alt="trusted_issuer.png" />
-<figcaption aria-hidden="true">trusted_issuer.png</figcaption>
-</figure>
+![](./trusted_issuer.png)
 
 ### 2.2.4. Authentication of the employee in DOME
 
@@ -211,10 +208,7 @@ We will talk more about the Business Wallet in another part of this document, bu
 
 ### 2.2.5. Summary: Key characteristics of eMandates in DOME:
 
-<figure>
-<img src="./overall_view_identity_components.png" alt="overall_view_identity_components.png" />
-<figcaption aria-hidden="true">overall_view_identity_components.png</figcaption>
-</figure>
+![](./overall_view_identity_components.png)
 
 - **Digital Representation:** eMandates are entirely digital, eliminating the need for physical documents and streamlining processes.
 - **Legal Authorization:** They carry legal weight, ensuring that actions performed by the mandatee on behalf of the mandator are legally binding.
