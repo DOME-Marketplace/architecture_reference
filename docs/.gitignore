@@ -2,10 +2,10 @@
 *
 !.gitignore
 !*/
-!*.jpeg
+!*.jpg
+!*.png
+!*.svg
 !*.pdf
 !*.md
+!*.jpeg
 !*.gif
-!*.png
-!*.jpg
-!*.svg
